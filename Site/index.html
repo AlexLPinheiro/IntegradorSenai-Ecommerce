@@ -1,51 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte de ícones -->
+  <!-- Fontes Google: Inter e Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <header class="navbar">
+    <div class="nav-left"></div> <!-- Div vazia para ajudar no centramento -->
+
     <nav>
-
-        <div class = "containerNavegacao">
-            <ul>
-                <li>
-                    <a>HOME</a>
-                </li>
-
-                <li>
-                    <a>SHOP</a>
-                </li>
-                    
-                <li>
-                    <a>CONTATO</a>
-                </li>
-
-                <li>
-                    <a>SOBRE NÓS</a>
-                    
-                </li>
-
-                <li>
-                    <figure>
-                        <img src="src/icones/Carrinho Preto .png" class ="iconeNavegacao"></img>
-                    </figure>
-                </li>
-            </ul>
-        </div>
-
-        <figure id="loginContainer">
-            <img src="src/icones/Login.png" id="login"></img>
-        </figure>
-        
-
+      <ul class="nav-menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">SHOP</a></li>
+        <li><a href="#">CONTATO</a></li>
+        <li><a href="#">SOBRE NÓS</a></li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="/Imagens/Ícones/Carrinho de compra-pretos.png" alt="Carrinho" class="icon-img"></img>
+            </figure>
+          </a>
+        </li>
+      </ul>
     </nav>
 
-    <header>
-
-    </header>
+    <div class="nav-icons">
+      <a href="#">
+        <figure>
+          <img src="/Imagens/Ícones/User Preto.png" alt="Perfil" class="icon-img"></img>
+        </figure>
+      </a>
+    </div>
+  </header>
 
 </body>
 </html>
