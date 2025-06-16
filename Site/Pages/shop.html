@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Progressive - Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="shop-page">
+
+  <!-- Header permanece o mesmo -->
+  <header>
+    <nav class="navBar">
+      <div class="navLeft"></div>
+      <ul class="navMenu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="#">CONTATO</a></li>
+        <li><a href="#">SOBRE NÓS</a></li>
+        <li>
+          <a href="#">
+            <figure><img src="/Imagens/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></figure>
+          </a>
+        </li>
+      </ul>
+      <div class="navIcons">
+        <a href="#">
+          <figure><img src="/Imagens/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></figure>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Barra Superior permanece a mesma -->
+    <section class="shop-top-bar">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> → SHOP
+        </div>
+        <div class="search-bar">
+          <form action="#">
+            <button type="submit" class="search-icon-btn">
+              <img src="/Imagens/Ícones/Lupa.png" >
+            </button>
+            <input type="text" placeholder="Pesquise em progressive.com">
+          </form>
+        </div>
+        <button class="filter-button">
+          FILTROS
+          <img src="/Imagens/Ícones/Filtro.png" alt="Filtros">
+        </button>
+      </div>
+    </section>
+
+    <!-- Categorias permanecem as mesmas -->
+    <section class="shop-section" id="shop-categories">
+      <div class="container">
+        <h2 class="section-title">CATEGORIAS:</h2>
+        <div class="category-list">
+          <a href="#" class="category-card"><img src="/Imagens/Shop/Categorias/Sinfonico.png" alt="Rock Sinfônico"><h3 class="category-name">SINFÔNICO</h3></a>
+          <a href="#" class="category-card"><img src="/Imagens/Shop/Categorias/Neo-Prog.png" alt="Neo Progressivo"><h3 class="category-name">NEO PROGRESSIVO</h3></a>
+          <a href="#" class="category-card"><img src="/Imagens/Shop/Categorias/Classico.png" alt="Rock Clássico"><h3 class="category-name">CLÁSSICO</h3></a>
+          <a href="#" class="category-card"><img src="/Imagens/Shop/Categorias/Jazz-Fusion.png" alt="Jazz Fusion"><h3 class="category-name">JAZZ FUSION</h3></a>
+          <a href="#" class="category-card"><img src="/Imagens/Shop/Categorias/Avant-Garde.png" alt="Avant-Garde"><h3 class="category-name">AVANT-GARDE</h3></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTAQUES - AGORA COM TAGS <p> SEMÂNTICAS -->
+    <section class="shop-section product-carousel-section" id="shop-highlights">
+        <div class="container">
+            <h2 class="section-title">DESTAQUES:</h2>
+        </div>
+        <div class="carousel-wrapper">
+            <button class="carousel-arrow prev">←</button>
+            <div class="product-list">
+                <!-- Produto 1 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/Imagens/Shop/Produtos/LedZeppelin_I.png" alt="Led Zeppelin I">
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-price">R$ 143,90</p>
+                        <div class="product-info-grid">
+                            <p class="product-album">Led Zeppelin</p>
+                            <p class="product-year">(1966)</p>
+                            <p class="product-artist">LED ZEPPELIN</p>
+                            <p class="product-label">Atlantic Records</p>
+                        </div>
+                    </div>
+                </article>
+                <!-- Produto 2 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/Imagens/Shop/Produtos/Yes_CloseToTheEdge.png" alt="Close To The Edge">
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-price">R$ 136,90</p>
+                        <div class="product-info-grid">
+                            <p class="product-album">Close To The Edge</p>
+                            <p class="product-year">(1972)</p>
+                            <p class="product-artist">YES</p>
+                            <p class="product-label">Atlantic Records</p>
+                        </div>
+                    </div>
+                </article>
+                <!-- Produto 3 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/Imagens/Shop/Produtos/JethroTull_ThickAsABrick.png" alt="Thick As A Brick">
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-price">R$ 71,90</p>
+                        <div class="product-info-grid">
+                            <p class="product-album">Thick As Brick</p>
+                            <p class="product-year">(1971)</p>
+                            <p class="product-artist">JETHRO TULL</p>
+                            <p class="product-label">Chrysalis Records</p>
+                        </div>
+                    </div>
+                </article>
+                <!-- Produto 4 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/Imagens/Shop/Produtos/PinkFloyd_TheWall.png" alt="The Wall">
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-price">R$ 85,90</p>
+                        <div class="product-info-grid">
+                            <p class="product-album">The Wall</p>
+                            <p class="product-year">(1979)</p>
+                            <p class="product-artist">PINK FLOYD</p>
+                            <p class="product-label">Columbia Records</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <button class="carousel-arrow next">→</button>
+        </div>
+    </section>
+
+    <!-- Banner Login CTA permanece o mesmo (usa <span> corretamente) -->
+    <section id="loginCtaBanner">
+      <div class="container">
+          <h2>FAÇA LOGIN PARA TER ACESSO<br>AOS NOSSOS PRODUTOS!</h2>
+          <button class="cta-banner-btn">CADASTRE-SE</button>
+          <div class="banner-bg-text-wrapper">
+              <span class="bg-text">ÁLBUNS</span>
+              <span class="bg-text">ARTISTAS</span>
+          </div>
+           <h3>PROGRESSIVE.</h3>
+      </div>
+    </section>
+
+    <!-- Logos de Bandas permanecem os mesmos -->
+    <section class="shop-section" id="band-logos">
+        <div class="container">
+            <h2 class="section-title">ENCONTRE SUA BANDA FAVORITA:</h2>
+            <div class="logo-list">
+                <a href="#"><img src="/Imagens/Shop/Logos/Tool.png" alt="Tool Logo"></a>
+                <a href="#"><img src="/Imagens/Shop/Logos/PinkFloyd.png" alt="Pink Floyd Logo"></a>
+                <a href="#"><img src="/Imagens/Shop/Logos/LedZeppelin.png" alt="Led Zeppelin Logo"></a>
+                <a href="#"><img src="/Imagens/Shop/Logos/Yes.png" alt="Yes Logo"></a>
+                <a href="#"><img src="/Imagens/Shop/Logos/Opeth.png" alt="Opeth Logo"></a>
+                <a href="#"><img src="/Imagens/Shop/Logos/Rush.png" alt="Rush Logo"></a>
+                <a href="#"><img src="/Imagens/Shop/Logos/DreamTheater.png" alt="Dream Theater Logo"></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- LANÇAMENTOS - AGORA COM TAGS <p> SEMÂNTICAS -->
+    <section class="shop-section product-carousel-section" id="shop-releases">
+        <div class="container">
+            <h2 class="section-title">LANÇAMENTOS:</h2>
+        </div>
+        <div class="carousel-wrapper">
+            <button class="carousel-arrow prev">←</button>
+            <div class="product-list">
+                <!-- Produto 1 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/Imagens/Shop/Produtos/MarcoMattei.png" alt="Age of Fragility">
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-price">R$ 143,90</p>
+                        <div class="product-info-grid">
+                            <p class="product-album">Age of Fragility</p>
+                            <p class="product-year">(2025)</p>
+                            <p class="product-artist">MARCO MATTEI</p>
+                            <p class="product-label">7D MEDIA</p>
+                        </div>
+                    </div>
+                </article>
+                <!-- Produto 2 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/Imagens/Shop/Produtos/ZolarCzack.png" alt="Who?">
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-price">R$ 136,90</p>
+                        <div class="product-info-grid">
+                            <p class="product-album">Who?</p>
+                            <p class="product-year">(2025)</p>
+                            <p class="product-artist">ZOLAR CZACK</p>
+                            <p class="product-label">Denis Furzov</p>
+                        </div>
+                    </div>
+                </article>
+                <!-- Produto 3 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/Imagens/Shop/Produtos/Camel.png" alt="Camel">
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-price">R$ 71,90</p>
+                        <div class="product-info-grid">
+                            <p class="product-album">Camel</p>
+                            <p class="product-year">(2025)</p>
+                            <p class="product-artist">BRAS CAMEL</p>
+                            <p class="product-label">Eeualizer Records</p>
+                        </div>
+                    </div>
+                </article>
+                <!-- Produto 4 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/Imagens/Shop/Produtos/Opeth.png" alt="The Last Will and Testament">
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-price">R$ 200,00</p>
+                        <div class="product-info-grid">
+                            <p class="product-album">The Last Will and Testament</p>
+                            <p class="product-year">(2024)</p>
+                            <p class="product-artist">OPETH</p>
+                            <p class="product-label">Napalm Records</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <button class="carousel-arrow next">→</button>
+        </div>
+    </section>
+
+    <!-- Banner "Descubra as Origens" permanece o mesmo (usa <span> corretamente) -->
+    <section id="discoverBanner">
+        <div class="container">
+            <h2>DESCUBRA AS ORIGENS DO ESTILO.</h2>
+            <a href="#" class="discover-btn">VER COLEÇÃO</a>
+        </div>
+        <span class="artist-overlay king-crimson">KING CRIMSON</span>
+        <span class="artist-overlay rush">RUSH</span>
+        <span class="artist-overlay pink-floyd">Pink Floyd</span>
+    </section>
+
+  </main>
+</body>
+</html>
