@@ -1,26 +1,46 @@
+/* =================================== */
+/* ESTILOS GLOBAIS E RESETS            */
+/* =================================== */
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #0c0c1e;
+  overflow-x: hidden; /* Previne scroll horizontal */
 }
 
-.navbar {
-  font-family: 'Roboto', sans-serif;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =================================== */
+/* HEADER E NAVEGAÇÃO                  */
+/* =================================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.2); 
-  backdrop-filter: blur(35px);               
-  -webkit-backdrop-filter: blur(35px);       
   padding: 0 40px;
   height: 60px;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  background: rgba(26, 26, 46, 0.1);
+  backdrop-filter: blur(10px);
 }
 
-
-
-.nav-left {
-  /* Espaço à esquerda (vazio propositalmente) */
+.navLeft {
+  flex: 1;
 }
 
-.nav-menu {
+.navMenu {
   list-style: none;
   display: flex;
   gap: 60px;
@@ -28,43 +48,528 @@ body {
   padding: 0;
   justify-content: center;
   align-items: center;
+  flex: 2;
 }
 
-.nav-menu li {
-  display: flex;
-  align-items: center;
-}
-
-.nav-menu li a {
+.navMenu li a {
   text-decoration: none;
-  color: black;
   font-size: 14px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  height: 100%;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: color 0.4s ease, text-shadow 0.3s ease;
+  color: white;
 }
 
-.icon-img {
+.navMenu li a:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.iconImg {
   height: 20px;
   width: auto;
   display: block;
 }
 
-.nav-icons {
+.navIcons {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  height: 100%;
+  flex: 1;
+  justify-content: flex-end;
 }
 
-.nav-icons i {
-  font-size: 18px;
-  color: black;
-  cursor: pointer;
-}
 figure {
-  display: inline-block;
   margin: 0;
   padding: 0;
+}
+
+a:hover .iconImg {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+/* Efeito Hover na Navbar para TODAS as seções brancas */
+body:has(#topAlbums:hover) .navBar,
+body:has(#artistsSection:hover) .navBar {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body:has(#topAlbums:hover) .navMenu li a,
+body:has(#artistsSection:hover) .navMenu li a {
+  color: black;
+}
+
+body:has(#topAlbums:hover) .navMenu li a:hover,
+body:has(#artistsSection:hover) .navMenu li a:hover {
+  text-shadow: none;
+  color: #555;
+}
+
+body:has(#topAlbums:hover) a:hover .iconImg,
+body:has(#artistsSection:hover) a:hover .iconImg {
+  filter: none;
+}
+
+body:has(#topAlbums:hover) .iconCart,
+body:has(#artistsSection:hover) .iconCart {
+  content: url('/Imagens/Ícones/Carrinho_De_Compras_Preto.png');
+}
+
+body:has(#topAlbums:hover) .iconUser,
+body:has(#artistsSection:hover) .iconUser {
+  content: url('/Imagens/Ícones/User_Preto.png');
+}
+
+/* =================================== */
+/* CONTEÚDO PRINCIPAL                  */
+/* =================================== */
+main {
+  padding-top: 60px;
+}
+
+.heroBanner {
+  position: relative;
+  height: calc(100vh - 60px);
+  background-color: #0c0c1e;
+  overflow: hidden;
+}
+
+.heroBanner::before {
+  top: 0;
+  height: 100%;
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-image: url("/Imagens/ElementosDeTela/Header.png");
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.heroBanner::after {
+  bottom: 0;
+  height: 30%;
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent, #0c0c1e);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 1rem;
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  font-weight: 530;
+  margin: 0;
+  text-transform: uppercase;
+  margin-left: 10vw;
+  margin-bottom: 10vh;
+  padding-top: 15vh;
+}
+
+.heroContent h2 {
+  font-size: 3rem;
+  font-weight: 440;
+  margin-left: 10vw;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  font-weight: 400;
+  margin-left: 10vw;
+  margin-top: 1rem;
+}
+
+/* =================================== */
+/* SEÇÃO TOP ALBUMS                    */
+/* =================================== */
+#topAlbums {
+  padding: 80px 0;
+  background-color: #fff;
+  color: #333;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 60px;
+}
+
+.albumList {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.albumItem {
+  display: flex;
+  align-items: stretch;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.albumItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.albumCover {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.albumCover img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+}
+
+.albumDetails {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.albumTitle {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.artistName {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.albumDetails p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 1rem;
+  color: white;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  align-self: flex-start;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bgPinkFloyd {
+  background: linear-gradient(145deg, #0d4a74, #002d4a);
+}
+
+.colorPinkFloyd {
+  background: linear-gradient(145deg, #36a3eb, #005c97);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btnPinkFloyd {
+  background: linear-gradient(145deg, #36a3eb, #005c97);
+}
+
+.bgRush {
+  background: linear-gradient(145deg, #3c1918, #1a0000);
+}
+
+.colorRush {
+  color: #a94442;
+}
+
+.btnRush {
+  background: linear-gradient(145deg, #c9302c, #a94442);
+}
+
+.bgKingCrimson {
+  background: #e2e3e5;
+}
+
+.colorKingCrimson {
+  color: #5d666d;
+}
+
+.btnKingCrimson {
+  background: linear-gradient(145deg, #868e96, #5a6268);
+}
+
+/* =================================== */
+/* SEÇÃO ARTISTAS - VERSÃO CORRIGIDA   */
+/* =================================== */
+#artistsSection {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.artistList {
+  display: flex;
+  gap: 50px;
+  height: 500px;
+}
+
+.artistItem {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  transition: flex-basis 0.6s ease, filter 0.6s ease;
+  flex-basis: 300px;
+  filter: grayscale(100%);
+}
+
+.artistCardName {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.artistItem:first-child {
+  flex-basis: 753px;
+  filter: grayscale(0%);
+}
+
+.artistItem:first-child .artistCardName {
+  opacity: 1;
+}
+
+.artistList:hover .artistItem {
+  flex-basis: 300px;
+  filter: grayscale(100%);
+}
+
+.artistList:hover .artistItem .artistCardName {
+  opacity: 0;
+}
+
+.artistList .artistItem:hover {
+  flex-basis: 753px;
+  filter: grayscale(0%);
+}
+
+.artistList .artistItem:hover .artistCardName {
+  opacity: 1;
+}
+
+/* =================================== */
+/* SEÇÃO CTA (LARGURA TOTAL)           */
+/* =================================== */
+#ctaSection {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-color: #000;
+  color: #fff;
+}
+
+.ctaText {
+  flex: 0 0 50%;
+  padding: 5% 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.ctaImage {
+  flex: 1 1 50%;
+  background-image: url('/Imagens/Banners/Toca_Discos.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.ctaImage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 20%,
+      rgba(0, 0, 0, 0) 50%);
+  z-index: 1;
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.ctaSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+.ctaText p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ccc;
+  max-width: 500px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: linear-gradient(145deg, #007bff, #0056b3);
+  color: white;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  border-radius: 50px;
+  margin-top: 2rem;
+  align-self: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.25);
+}
+
+.ctaCopyright {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 0.8rem;
+  color: #aaa;
+  text-align: right;
+  z-index: 2;
+}
+
+/* =================================== */
+/* MEDIA QUERIES PARA RESPONSIVIDADE   */
+/* =================================== */
+@media (max-width: 992px) {
+
+  /* Top Albums */
+  .albumItem,
+  .albumItem:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .albumDetails {
+    text-align: center;
+  }
+
+  .btn {
+    align-self: center;
+  }
+
+  /* Artists */
+  .artistList {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .artistItem,
+  .artistList:hover .artistItem,
+  .artistList .artistItem:hover {
+    flex-basis: 250px;
+    background-size: cover;
+  }
+
+  .artistItem:first-child {
+    flex-basis: 250px;
+  }
+
+  /* CTA Section */
+  #ctaSection {
+    flex-direction: column;
+  }
+
+  .ctaImage {
+    order: -1;
+    min-height: 350px;
+  }
+
+  .ctaImage::after {
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.8) 80%,
+        rgba(0, 0, 0, 1) 100%);
+  }
+
+  .ctaText {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .ctaText p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ctaBtn {
+    align-self: center;
+  }
+
+  .ctaCopyright {
+    position: relative;
+    text-align: center;
+    bottom: auto;
+    right: auto;
+    padding: 20px;
+    background-color: #000;
+    z-index: 2;
+  }
 }
