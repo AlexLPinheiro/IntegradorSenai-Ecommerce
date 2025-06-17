@@ -9,14 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="homePage">
 
-  <!-- O header não muda -->
-  <header>
+  <header class="mainHeader">
     <nav class="navBar">
       <div class="navLeft"></div>
       <ul class="navMenu">
-        <li><a href="#">HOME</a></li>
+        <li><a href="index.html">HOME</a></li>
         <li><a href="shop.html">SHOP</a></li>
         <li><a href="#">CONTATO</a></li>
         <li><a href="#">SOBRE NÓS</a></li>
@@ -35,7 +34,6 @@
   </header>
   
   <main>
-    <!-- A seção heroBanner não muda -->
     <section class="heroBanner">
       <div class="heroContent">
         <h1>PROGRESSIVE.</h1>
@@ -45,50 +43,35 @@
       </div>
     </section>
 
-    <!-- SEÇÃO TOP ALBUMS -->
     <section id="topAlbums">
       <div class="container">
         <h2 class="sectionTitle">TOP ALBUMS</h2>
         <p class="sectionSubtitle">Conheça alguns dos álbuns de rock progressivo mais escutados de todos os tempos:</p>
         <div class="albumList">
-          <!-- Album 1: Pink Floyd (Esquerda) -->
           <article class="albumItem">
-            <div class="albumCover bgPinkFloyd">
-              <img src="/Imagens/Banners/The_Dark_Side_Of_The_Moon.png" alt="Capa do álbum Dark Side of the Moon">
-            </div>
+            <div class="albumCover bgPinkFloyd"><img src="/Imagens/Banners/The_Dark_Side_Of_The_Moon.png" alt="Capa do álbum Dark Side of the Moon"></div>
             <div class="albumDetails">
               <h3 class="albumTitle colorPinkFloyd">DARK SIDE OF THE MOON</h3>
               <h4 class="artistName">Pink Floyd</h4>
-              <p>Um dos álbuns mais aclamados de todos os tempos, lançado no ano de 1973.</p>
-              <p>Conta com uma faixa contínua que se extende por 10 diferentes faixas, com temas psicodélicos, introspectivos e experimentais.</p>
-              <a href="#" class="btn btnPinkFloyd">SAIBA MAIS</a>
+              <p>Um dos álbuns mais aclamados de todos os tempos.</p>
+              <a href="produto.html" class="btn btnPinkFloyd">SAIBA MAIS</a>
             </div>
           </article>
-          
-          <!-- Album 2: Rush (Direita) -->
           <article class="albumItem">
-            <div class="albumCover bgRush">
-              <img src="/Imagens/Banners/Moving_Pictures.png" alt="Capa do álbum Moving Pictures">
-            </div>
+            <div class="albumCover bgRush"><img src="/Imagens/Banners/Moving_Pictures.png" alt="Capa do álbum Moving Pictures"></div>
             <div class="albumDetails">
               <h3 class="albumTitle colorRush">MOVING PICTURES</h3>
               <h4 class="artistName">RUSH</h4>
-              <p>Considerado o auge comercial e artístico do Rush, lançado em 1981.</p>
-              <p>Combina a complexidade do rock progressivo com a acessibilidade do hard rock, incluindo clássicos como "Tom Sawyer" e "Limelight".</p>
+              <p>Considerado o auge comercial e artístico do Rush.</p>
               <a href="#" class="btn btnRush">SAIBA MAIS</a>
             </div>
           </article>
-
-          <!-- Album 3: King Crimson (Esquerda) -->
            <article class="albumItem">
-            <div class="albumCover bgKingCrimson">
-              <img src="/Imagens/Banners/In_The_Court_Of_The_Crimson_King.png" alt="Capa do álbum In the Court of The Crimson King">
-            </div>
+            <div class="albumCover bgKingCrimson"><img src="/Imagens/Banners/In_The_Court_Of_The_Crimson_King.png" alt="Capa do álbum In the Court of The Crimson King"></div>
             <div class="albumDetails">
               <h3 class="albumTitle colorKingCrimson">IN THE COURT OF THE CRIMSON KING</h3>
               <h4 class="artistName">King Crimson</h4>
-              <p>O álbum de estreia da banda, lançado em 1969, é um marco fundamental na história do rock progressivo.</p>
-              <p>Sua sonoridade inovadora, com uso de mellotron e arranjos complexos, definiu o gênero para as gerações futuras.</p>
+              <p>O álbum de estreia da banda, um marco do rock progressivo.</p>
               <a href="#" class="btn btnKingCrimson">SAIBA MAIS</a>
             </div>
           </article>
@@ -96,67 +79,33 @@
       </div>
     </section>
 
-<!-- =================================== -->
-<!-- NOVA SEÇÃO DE ARTISTAS              -->
-<!-- =================================== -->
-<section id="artistsSection">
-  <div class="container">
-    <h2 class="sectionTitle">ARTISTAS</h2>
-    <p class="sectionSubtitle">Encontre seus artistas favoritos:</p>
-
-    <div class="artistList">
-      <!-- Item 1: King Crimson (Ativo por padrão) -->
-      <a href="#" class="artistItem" style="background-image: url('/Imagens/Artistas/Banner/King_Crimson.png');">
-        <h3 class="artistCardName">KING CRIMSON</h3>
-      </a>
-      
-      <!-- Item 2: Rush -->
-      <a href="#" class="artistItem" style="background-image: url('/Imagens/Artistas/Banner/Rush.png');">
-        <h3 class="artistCardName">RUSH</h3>
-      </a>
-
-      <!-- Item 3: Porcupine Tree -->
-      <a href="#" class="artistItem" style="background-image: url('/Imagens/Artistas/Banner/Porcupine_Tree.png');">
-        <h3 class="artistCardName">PORCUPINE TREE</h3>
-      </a>
-      
-      <!-- Item 4: Tool -->
-      <a href="#" class="artistItem" style="background-image: url('/Imagens/Artistas/Banner/Tool.png');">
-        <h3 class="artistCardName">TOOL</h3>
-      </a>
+    <section id="artistsSection">
+      <div class="container">
+        <h2 class="sectionTitle">ARTISTAS</h2>
+        <p class="sectionSubtitle">Encontre seus artistas favoritos:</p>
+        <div class="artistList">
+          <a href="#" class="artistItem" style="background-image: url('/Imagens/Artistas/Banner/King_Crimson.png');"><h3 class="artistCardName">KING CRIMSON</h3></a>
+          <a href="#" class="artistItem" style="background-image: url('/Imagens/Artistas/Banner/Rush.png');"><h3 class="artistCardName">RUSH</h3></a>
+          <a href="#" class="artistItem" style="background-image: url('/Imagens/Artistas/Banner/Porcupine_Tree.png');"><h3 class="artistCardName">PORCUPINE TREE</h3></a>
+          <a href="#" class="artistItem" style="background-image: url('/Imagens/Artistas/Banner/Tool.png');"><h3 class="artistCardName">TOOL</h3></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer id="ctaSection">
+    <div class="ctaText">
+      <h1 class="ctaTitle">PROGRESSIVE.</h1>
+      <h2 class="ctaSubtitle">EXPLORE AS FRONTEIRAS DO SOM</h2>
+      <p>Discos essenciais do rock progressivo: álbuns que transcendem o tempo, com capas icônicas e faixas que contam histórias.</p>
+      <p>Coloque a agulha no disco e embarque nessa viagem sonora.</p>
+      <a href="shop.html" class="ctaBtn">COMPRE JÁ</a>
     </div>
-  </div>
-</section>
-
-<!-- ... (fim da seção #artistsSection) ... -->
+    <div class="ctaImage"></div>
+    <div class="ctaCopyright">
+        <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- =================================== -->
-<!-- NOVA SEÇÃO DE CTA (LARGURA TOTAL)   -->
-<!-- =================================== -->
-<section id="ctaSection">
-  <div class="ctaText">
-    <h1 class="ctaTitle">PROGRESSIVE.</h1>
-    <h2 class="ctaSubtitle">EXPLORE AS FRONTEIRAS DO SOM</h2>
-    <p>
-      Discos essenciais do rock progressivo: álbuns que transcendem o tempo, com capas icônicas e faixas que contam histórias.
-    </p>
-    <p>
-      Coloque a agulha no disco e embarque nessa viagem sonora.
-    </p>
-    <a href="#" class="ctaBtn">COMPRE JÁ</a>
-  </div>
-  <div class="ctaImage">
-    <!-- A imagem será colocada via CSS como background -->
-  </div>
-  <div class="ctaCopyright">
-      <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
-  </div>
-</section>
-
-</main>
 </body>
 </html>
-
