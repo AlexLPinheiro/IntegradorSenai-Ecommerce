@@ -1,6 +1,4 @@
-/* =================================== */
-/* ESTILOS GLOBAIS E RESETS            */
-/* =================================== */
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -24,9 +22,6 @@ figure {
   display: block;
 }
 
-/* =================================== */
-/* HEADER GLOBAL (ESTRUTURA BASE)      */
-/* =================================== */
 .mainHeader {
   position: fixed;
   top: 0;
@@ -53,9 +48,7 @@ figure {
   transition: color 0.4s ease, text-shadow 0.3s ease;
 }
 
-/* =================================== */
-/* ESTILOS DA HOME PAGE                */
-/* =================================== */
+
 .homePage {
   background-color: #0c0c1e;
   color: #fff;
@@ -138,12 +131,12 @@ figure {
 
 .homePage:has(#topAlbums:hover) .iconCart,
 .homePage:has(#artistsSection:hover) .iconCart {
-  content: url('/Imagens/Ícones/Carrinho_De_Compras_Preto.png');
+  content: url('src/Ícones/Carrinho_De_Compras_Preto.png');
 }
 
 .homePage:has(#topAlbums:hover) .iconUser,
 .homePage:has(#artistsSection:hover) .iconUser {
-  content: url('/Imagens/Ícones/User_Preto.png');
+  content: url('src/Ícones/User_Preto.png');
 }
 
 .homePage main {
@@ -165,7 +158,7 @@ figure {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: url("/Imagens/ElementosDeTela/Header.png");
+  background-image: url("src/ElementosDeTela/Header.png");
   background-size: cover;
   opacity: 0.6;
 }
@@ -319,14 +312,33 @@ figure {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.bgPinkFloyd { background: linear-gradient(145deg, #0d4a74, #002d4a); }
-.colorPinkFloyd { background: linear-gradient(145deg, #36a3eb, #005c97); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.btnPinkFloyd { background: linear-gradient(145deg, #36a3eb, #005c97); }
-.bgRush { background: linear-gradient(145deg, #3c1918, #1a0000); }
-.colorRush { color: #a94442; }
-.btnRush { background: linear-gradient(145deg, #c9302c, #a94442); }
-.bgKingCrimson { background: #e2e3e5; }
-.colorKingCrimson { color: #5d666d; }
+.bgPinkFloyd { 
+  background: linear-gradient(145deg, #0d4a74, #002d4a); 
+}
+.colorPinkFloyd { 
+  background: linear-gradient(145deg, #36a3eb, #005c97); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent; 
+}
+.btnPinkFloyd { 
+  background: linear-gradient(145deg, #36a3eb, #005c97); 
+}
+.bgRush { 
+  background: linear-gradient(145deg, #3c1918, #1a0000); 
+}
+.colorRush { 
+  color: #a94442; 
+}
+.btnRush { 
+  background: linear-gradient(145deg, #c9302c, #a94442); 
+}
+.bgKingCrimson { 
+  background: #e2e3e5; 
+}
+.colorKingCrimson { 
+  color: #5d666d; 
+}
 .btnKingCrimson { background: linear-gradient(145deg, #868e96, #5a6268); }
 
 #artistsSection {
@@ -348,7 +360,7 @@ figure {
   background-size: auto 100%;
   background-position: center;
   transition: flex-basis 0.6s ease, filter 0.6s ease;
-  flex-basis: 300px;
+  flex-basis: 350px;
   filter: grayscale(100%);
 }
 
@@ -375,7 +387,7 @@ figure {
 }
 
 .artistList:hover .artistItem {
-  flex-basis: 300px;
+  flex-basis: 350px;
   filter: grayscale(100%);
 }
 
@@ -413,7 +425,7 @@ figure {
 
 .ctaImage {
   flex: 1 1 50%;
-  background-image: url('/Imagens/Banners/Toca_Discos.png');
+  background-image: url('src/Banners/Toca_Discos.png');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -481,9 +493,7 @@ figure {
   z-index: 2;
 }
 
-/* ==================================================== */
-/* ESTILOS UNIFICADOS PARA PÁGINAS INTERNAS (SHOP, PRODUTO) */
-/* ==================================================== */
+
 .shopPage,
 .productPage {
   background-color: #fff;
@@ -528,17 +538,15 @@ figure {
 
 .shopPage .iconCart,
 .productPage .iconCart {
-  content: url('/Imagens/Ícones/Carrinho_De_Compras_Preto.png');
+  content: url('src/Ícones/Carrinho_De_Compras_Preto.png');
 }
 
 .shopPage .iconUser,
 .productPage .iconUser {
-  content: url('/Imagens/Ícones/User_Preto.png');
+  content: url('src/Ícones/User_Preto.png');
 }
 
-/* ==================================================== */
-/* ESTILOS ESPECÍFICOS DA PÁGINA DA LOJA (SHOP)         */
-/* ==================================================== */
+
 .shopPage main {
   padding-top: 120px;
 }
@@ -694,9 +702,7 @@ figure {
   transform: scale(1.1);
 }
 
-/* ==================================================== */
-/* ESTILOS ESPECÍFICOS DA PÁGINA DE PRODUTO             */
-/* ==================================================== */
+
 .productPage main {
   padding-top: 80px;
 }
@@ -918,9 +924,7 @@ figure {
   margin: 0;
 }
 
-/* ==================================================== */
-/* COMPONENTES COMPARTILHADOS                           */
-/* ==================================================== */
+
 .productCarouselSection {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1118,9 +1122,7 @@ figure {
   margin: 0;
 }
 
-/* =================================== */
-/* CSS PARA O PAINEL DE FILTROS        */
-/* =================================== */
+
 .filterToggleCheckbox {
   display: none;
 }
@@ -1324,9 +1326,6 @@ figure {
   max-width: 100px;
 }
 
-/* =================================== */
-/* MEDIA QUERIES GLOBAIS               */
-/* =================================== */
 @media (max-width: 1240px) {
   .productList {
     padding-left: 20px;
