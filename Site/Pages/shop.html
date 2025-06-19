@@ -37,7 +37,7 @@
           <a href="index.html">Home</a> → SHOP
         </p>
         <form class="searchBar" action="#">
-            <button type="submit" class="searchIconBtn" aria-label="Pesquisar"><img src="/Imagens/Ícones/Lupa.png" alt=""></button>
+            <button type="submit" class="searchIconBtn" aria-label="Pesquisar"><img src="src/Ícones/Lupa.png" alt=""></button>
             <input type="text" placeholder="Pesquise em progressive.com">
         </form>
         <label for="filterToggle" class="filterButton">
@@ -141,56 +141,73 @@
       </div>
       <div class="carouselWrapper">
         <button class="carouselArrow prev" aria-label="Anterior">←</button>
+
         <div class="productList">
-            <article class="productCard">
-              <figure class="productImageWrapper"><img src="src/Albuns/Led_Zepellin.png" alt="Led Zeppelin I"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
-              <div class="productDetails">
-                <p class="productPrice">R$ 143,90</p>
-                <div class="productInfoGrid">
-                  <p class="productAlbum">Led Zeppelin</p><p class="productYear">(1966)</p>
-                  <p class="productArtist">LED ZEPPELIN</p><p class="productLabel">Atlantic Records</p>
+
+            <a href="produto.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/Led_Zepellin.png" alt="Led Zeppelin I"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 143,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">Led Zeppelin</p><p class="productYear">(1966)</p>
+                    <p class="productArtist">LED ZEPPELIN</p><p class="productLabel">Atlantic Records</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-            <article class="productCard">
-              <figure class="productImageWrapper"><img src="src/Albuns/Close_To_The_Edge.png" alt="Close To The Edge"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
-              <div class="productDetails">
-                <p class="productPrice">R$ 136,90</p>
-                <div class="productInfoGrid">
-                  <p class="productAlbum">Close To The Edge</p><p class="productYear">(1972)</p>
-                  <p class="productArtist">YES</p><p class="productLabel">Atlantic Records</p>
+              </article>
+            </a>
+
+            <a href="produto.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/Close_To_The_Edge.png" alt="Close To The Edge"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 136,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">Close To The Edge</p><p class="productYear">(1972)</p>
+                    <p class="productArtist">YES</p><p class="productLabel">Atlantic Records</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-            <article class="productCard">
-              <figure class="productImageWrapper"><img src="src/Albuns/Thick_As_Brick.png" alt="Thick As A Brick"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
-              <div class="productDetails">
-                <p class="productPrice">R$ 71,90</p>
-                <div class="productInfoGrid">
-                  <p class="productAlbum">Thick As Brick</p><p class="productYear">(1971)</p>
-                  <p class="productArtist">JETHRO TULL</p><p class="productLabel">Chrysalis Records</p>
+              </article>
+            </a>
+
+            <a href="produto.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/Thick_As_Brick.png" alt="Thick As A Brick"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 71,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">Thick As Brick</p><p class="productYear">(1971)</p>
+                    <p class="productArtist">JETHRO TULL</p><p class="productLabel">Chrysalis Records</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-            <article class="productCard">
-              <figure class="productImageWrapper"><img src="src/Albuns/The_Wall.png" alt="The Wall"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
-              <div class="productDetails">
-                <p class="productPrice">R$ 85,90</p>
-                <div class="productInfoGrid">
-                  <p class="productAlbum">The Wall</p><p class="productYear">(1979)</p>
-                  <p class="productArtist">PINK FLOYD</p><p class="productLabel">Columbia Records</p>
+              </article>
+            </a>
+
+            <a href="produto.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/The_Wall.png" alt="The Wall"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 85,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">The Wall</p><p class="productYear">(1979)</p>
+                    <p class="productArtist">PINK FLOYD</p><p class="productLabel">Columbia Records</p>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </a>
+
         </div>
+
         <button class="carouselArrow next" aria-label="Próximo">→</button>
       </div>
     </section>
 
     <section id="loginCtaBanner">
-      <figure>
-        <img src="src/Banners/Login.png" alt="Banner chamando para fazer login ou se cadastrar na Progressive.">
-      </figure>
+      <div class="botaoWrapper">
+        <div class="fundoBotao"></div>
+        <button class="buttonBanners">CADASTRE-SE</button>
+      </div>
+      <h1>PROGRESSIVE.</h1>
     </section>
 
     <section class="shopSection" id="bandLogos">
@@ -214,48 +231,63 @@
       </div>
       <div class="carouselWrapper">
         <button class="carouselArrow prev" aria-label="Anterior">←</button>
+
         <div class="productList">
-          <article class="productCard">
-            <figure class="productImageWrapper"><img src="src/Albuns/Age_Of_Fragility.png" alt="Age of Fragility"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
-            <div class="productDetails">
-              <p class="productPrice">R$ 143,90</p>
-              <div class="productInfoGrid">
-                <p class="productAlbum">Age of Fragility</p><p class="productYear">(2025)</p>
-                <p class="productArtist">MARCO MATTEI</p><p class="productLabel">7D MEDIA</p>
+
+          <a href="produto.html" class="productCard">
+            <article>
+              <figure class="productImageWrapper"><img src="src/Albuns/Age_Of_Fragility.png" alt="Age of Fragility"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+              <div class="productDetails">
+                <p class="productPrice">R$ 143,90</p>
+                <div class="productInfoGrid">
+                  <p class="productAlbum">Age of Fragility</p><p class="productYear">(2025)</p>
+                  <p class="productArtist">MARCO MATTEI</p><p class="productLabel">7D MEDIA</p>
+                </div>
               </div>
-            </div>
-          </article>
-          <article class="productCard">
-            <figure class="productImageWrapper"><img src="src/Albuns/Who.png" alt="Who?"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
-            <div class="productDetails">
-              <p class="productPrice">R$ 136,90</p>
-              <div class="productInfoGrid">
-                <p class="productAlbum">Who?</p><p class="productYear">(2025)</p>
-                <p class="productArtist">ZOLAR CZACK</p><p class="productLabel">Denis Furzov</p>
+            </article>
+          </a>
+
+          <a href="produto.html" class="productCard">
+            <article>
+              <figure class="productImageWrapper"><img src="src/Albuns/Who.png" alt="Who?"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+              <div class="productDetails">
+                <p class="productPrice">R$ 136,90</p>
+                <div class="productInfoGrid">
+                  <p class="productAlbum">Who?</p><p class="productYear">(2025)</p>
+                  <p class="productArtist">ZOLAR CZACK</p><p class="productLabel">Denis Furzov</p>
+                </div>
               </div>
-            </div>
-          </article>
-          <article class="productCard">
-            <figure class="productImageWrapper"><img src="src/Albuns/Camel.png" alt="Camel"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
-            <div class="productDetails">
-              <p class="productPrice">R$ 71,90</p>
-              <div class="productInfoGrid">
-                <p class="productAlbum">Camel</p><p class="productYear">(2025)</p>
-                <p class="productArtist">BRAS CAMEL</p><p class="productLabel">Eeualizer Records</p>
+            </article>
+          </a>
+
+          <a href="produto.html" class="productCard">
+            <article>
+              <figure class="productImageWrapper"><img src="src/Albuns/Camel.png" alt="Camel"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+              <div class="productDetails">
+                <p class="productPrice">R$ 71,90</p>
+                <div class="productInfoGrid">
+                  <p class="productAlbum">Camel</p><p class="productYear">(2025)</p>
+                  <p class="productArtist">BRAS CAMEL</p><p class="productLabel">Eeualizer Records</p>
+                </div>
               </div>
-            </div>
-          </article>
-          <article class="productCard">
-            <figure class="productImageWrapper"><img src="src/Albuns/The_Last_will_And_Testament.png" alt="The Last Will and Testament"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
-            <div class="productDetails">
-              <p class="productPrice">R$ 200,00</p>
-              <div class="productInfoGrid">
-                <p class="productAlbum">The Last Will and Testament</p><p class="productYear">(2024)</p>
-                <p class="productArtist">OPETH</p><p class="productLabel">Napalm Records</p>
+            </article>
+          </a>
+          
+          <a href="produto.html" class="productCard">
+            <article>
+              <figure class="productImageWrapper"><img src="src/Albuns/The_Last_will_And_Testament.png" alt="The Last Will and Testament"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+              <div class="productDetails">
+                <p class="productPrice">R$ 200,00</p>
+                <div class="productInfoGrid">
+                  <p class="productAlbum">The Last Will and Testament</p><p class="productYear">(2024)</p>
+                  <p class="productArtist">OPETH</p><p class="productLabel">Napalm Records</p>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>  
+
         </div>
+        
         <button class="carouselArrow next" aria-label="Próximo">→</button>
       </div>
     </section>

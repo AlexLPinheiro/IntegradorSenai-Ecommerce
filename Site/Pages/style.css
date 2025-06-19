@@ -1,4 +1,6 @@
-
+/* =================================== */
+/* ESTILOS GLOBAIS E RESETS            */
+/* =================================== */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -22,6 +24,9 @@ figure {
   display: block;
 }
 
+/* =================================== */
+/* HEADER GLOBAL (ESTRUTURA BASE)      */
+/* =================================== */
 .mainHeader {
   position: fixed;
   top: 0;
@@ -48,7 +53,9 @@ figure {
   transition: color 0.4s ease, text-shadow 0.3s ease;
 }
 
-
+/* =================================== */
+/* ESTILOS DA HOME PAGE                */
+/* =================================== */
 .homePage {
   background-color: #0c0c1e;
   color: #fff;
@@ -312,33 +319,14 @@ figure {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.bgPinkFloyd { 
-  background: linear-gradient(145deg, #0d4a74, #002d4a); 
-}
-.colorPinkFloyd { 
-  background: linear-gradient(145deg, #36a3eb, #005c97); 
-  -webkit-background-clip: text; 
-  background-clip: text; 
-  color: transparent; 
-}
-.btnPinkFloyd { 
-  background: linear-gradient(145deg, #36a3eb, #005c97); 
-}
-.bgRush { 
-  background: linear-gradient(145deg, #3c1918, #1a0000); 
-}
-.colorRush { 
-  color: #a94442; 
-}
-.btnRush { 
-  background: linear-gradient(145deg, #c9302c, #a94442); 
-}
-.bgKingCrimson { 
-  background: #e2e3e5; 
-}
-.colorKingCrimson { 
-  color: #5d666d; 
-}
+.bgPinkFloyd { background: linear-gradient(145deg, #0d4a74, #002d4a); }
+.colorPinkFloyd { background: linear-gradient(145deg, #36a3eb, #005c97); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.btnPinkFloyd { background: linear-gradient(145deg, #36a3eb, #005c97); }
+.bgRush { background: linear-gradient(145deg, #3c1918, #1a0000); }
+.colorRush { color: #a94442; }
+.btnRush { background: linear-gradient(145deg, #c9302c, #a94442); }
+.bgKingCrimson { background: #e2e3e5; }
+.colorKingCrimson { color: #5d666d; }
 .btnKingCrimson { background: linear-gradient(145deg, #868e96, #5a6268); }
 
 #artistsSection {
@@ -493,20 +481,25 @@ figure {
   z-index: 2;
 }
 
-
+/* ==================================================== */
+/* ESTILOS UNIFICADOS PARA PÁGINAS INTERNAS             */
+/* ==================================================== */
 .shopPage,
-.productPage {
+.productPage,
+.categoryPage {
   background-color: #fff;
   color: #1a1a1a;
 }
 
 .shopPage .mainHeader,
-.productPage .mainHeader {
+.productPage .mainHeader,
+.categoryPage .mainHeader {
   background-color: #fff;
 }
 
 .shopPage .navBar,
-.productPage .navBar {
+.productPage .navBar,
+.categoryPage .navBar {
   position: relative;
   display: flex;
   justify-content: center;
@@ -516,17 +509,20 @@ figure {
 }
 
 .shopPage .navMenu a,
-.productPage .navMenu a {
+.productPage .navMenu a,
+.categoryPage .navMenu a {
   color: #333;
 }
 
 .shopPage .navMenu a:hover,
-.productPage .navMenu a:hover {
+.productPage .navMenu a:hover,
+.categoryPage .navMenu a:hover {
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
 
 .shopPage .navIcons,
-.productPage .navIcons {
+.productPage .navIcons,
+.categoryPage .navIcons {
   position: absolute;
   right: 40px;
   top: 50%;
@@ -537,17 +533,22 @@ figure {
 }
 
 .shopPage .iconCart,
-.productPage .iconCart {
+.productPage .iconCart,
+.categoryPage .iconCart {
   content: url('src/Ícones/Carrinho_De_Compras_Preto.png');
 }
 
 .shopPage .iconUser,
-.productPage .iconUser {
+.productPage .iconUser,
+.categoryPage .iconUser {
   content: url('src/Ícones/User_Preto.png');
 }
 
-
-.shopPage main {
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DA LOJA (SHOP)         */
+/* ==================================================== */
+.shopPage main,
+.categoryPage main {
   padding-top: 120px;
 }
 
@@ -559,7 +560,8 @@ figure {
   height: 60px;
 }
 
-.shopPage .navMenu a[href*="shop"] {
+.shopPage .navMenu a[href*="shop"],
+.categoryPage .navMenu a[href*="shop"] {
   text-decoration: underline;
   text-decoration-color: #000;
   text-decoration-thickness: 2px;
@@ -643,7 +645,7 @@ figure {
   font-size: 1.8rem;
   font-weight: 900;
   color: #000;
-  margin: 0 0 25px 0;
+  margin: 0 0 50px 0;
 }
 
 .categoryList {
@@ -702,7 +704,9 @@ figure {
   transform: scale(1.1);
 }
 
-
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DE PRODUTO             */
+/* ==================================================== */
 .productPage main {
   padding-top: 80px;
 }
@@ -924,7 +928,9 @@ figure {
   margin: 0;
 }
 
-
+/* ==================================================== */
+/* COMPONENTES COMPARTILHADOS (CARROSSEL, CARDS, BANNERS) */
+/* ==================================================== */
 .productCarouselSection {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -975,7 +981,21 @@ figure {
 
 .productCard {
   flex: 0 0 250px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
   text-align: left;
+  padding: 1rem;
+  transition: 200ms ease-in;
+}
+.productCard article {
+  display: contents; /* Para o article não interferir no layout */
+}
+
+
+.productCard:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .productImageWrapper {
@@ -1038,24 +1058,35 @@ figure {
 }
 
 #loginCtaBanner {
-  padding: 50px 0;
-  background-color: #f8f9fa;
-}
-
-#loginCtaBanner figure {
-  margin: 0;
-  padding: 0;
-}
-
-#loginCtaBanner img {
-  display: block;
+  background-image: url("src/Banners/Login.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 100%;
-  height: auto;
+  aspect-ratio: 1920 / 525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#loginCtaBanner h1 {
+  font-size: 80px;
+  color: #1a1a1a;
 }
 
 #bandLogos {
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
+}
+
+/* MODIFICAÇÃO: Regra específica para o título da seção de bandas */
+#bandLogos .sectionTitle {
+  font-weight: 400;     /* Define uma espessura normal */
+  text-align: center;   /* Centraliza o texto */
+  font-size: 1.8rem;
+  color: #000;
+  margin: 0 auto 50px auto;
 }
 
 .logoList {
@@ -1122,7 +1153,9 @@ figure {
   margin: 0;
 }
 
-
+/* =================================== */
+/* CSS PARA O PAINEL DE FILTROS        */
+/* =================================== */
 .filterToggleCheckbox {
   display: none;
 }
@@ -1326,6 +1359,63 @@ figure {
   max-width: 100px;
 }
 
+.botaoWrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 35vh; /* Aqui você controla o quanto o botão desce */
+}
+
+.fundoBotao {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  width: 20.2vw;
+  height: 10.3vh;
+  display: inline-block;
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.buttonBanners {
+  position: relative;
+  z-index: 2;
+  width: 20vw;
+  height: 10vh;
+  background-color: white;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DE CATEGORIA (NOVO)    */
+/* ==================================================== */
+#categoryGridSection {
+  padding: 50px 0;
+}
+
+.categoryPageTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 50px 0;
+  color: #1a1a1a;
+}
+
+.productListGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+
+/* =================================== */
+/* MEDIA QUERIES GLOBAIS               */
+/* =================================== */
 @media (max-width: 1240px) {
   .productList {
     padding-left: 20px;
@@ -1409,7 +1499,7 @@ figure {
     order: 2;
     margin-top: 10px;
   }
-  .shopPage main {
+  .shopPage main, .categoryPage main {
     padding-top: 220px;
   }
   .categoryList {
