@@ -46,4 +46,4 @@ As ferramentas utilizadas foram:
 
 O design do projeto foi elaborado no Figma, garantindo uma experiência visual clara e organizada.
 
-🔗 [Acessar o protótipo no Figma](https://www.figma.com/design/6bCZQWDLz29tdspJuMgqlg/INTEGRADOR?node-id=1-2&t=h1c4ZY6nyDdqjXWt-1) *(substituir pelo link real do protótipo)*
+🔗 [Link de acesso ao protótipo do figma](https://www.figma.com/design/6bCZQWDLz29tdspJuMgqlg/INTEGRADOR?node-id=1-2&t=h1c4ZY6nyDdqjXWt-1) 
