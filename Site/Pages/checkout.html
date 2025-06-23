@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Progressive - Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="paymentPage internal-page">
+
+  <header class="mainHeader">
+    <nav class="navBar">
+      <ul class="navMenu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="contato.html">CONTATO</a></li>
+        <li><a href="sobre_nos.html">SOBRE NÓS</a></li>
+      </ul>
+      <div class="navIcons">
+        <a href="carrinho.html"><figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></img></figure></a>
+        <a href="perfil.html"><figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></img></figure></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <p class="breadcrumbs breadcrumbs-fullwidth">
+      <a href="index.html">Home</a> → <a href="carrinho.html">Carrinho</a> → <a href="login.html">Finalizar Compra</a> → Checkout
+    </p>
+
+    <div class="paymentWrapper">
+      <!-- Coluna da Esquerda: Resumo do Pedido -->
+      <section class="paymentSummary">
+        <div class="column-content">
+          <h1 class="pageTitle">RESUMO DO PEDIDO</h1>
+          <p class="summaryItemCount">TOTAL: (3 itens) R$579,78</p>
+          
+          <ul class="itemsList">
+            <li class="cartItem">
+              <figure class="cartItemImage"><img src="src/Albuns/The_Dark_Side_Of_The_Moon_Frente.jpg" alt="The Dark Side Of The Moon"></img></figure>
+              <div class="cartItemDetails">
+                <h3>THE DARK SIDE OF THE MOON</h3>
+                <p>Pink Floyd</p>
+                <p class="cartItemPrice">R$137,89</p>
+              </div>
+              <div class="cartItemControls">
+                <button class="iconButton" aria-label="Favoritar">♡</button>
+                <button class="iconButton" aria-label="Remover">×</button>
+                <select name="quantity" class="quantitySelectorSmall"><option value="1">1</option></select>
+              </div>
+            </li>
+            <li class="cartItem">
+              <figure class="cartItemImage"><img src="src/Albuns/Animals.jpg" alt="Animals"></img></figure>
+              <div class="cartItemDetails">
+                <h3>ANIMALS</h3>
+                <p>Pink Floyd</p>
+                <p class="cartItemPrice">R$220,89</p>
+              </div>
+              <div class="cartItemControls">
+                <button class="iconButton favorited" aria-label="Desfavoritar">♥</button>
+                <button class="iconButton" aria-label="Remover">×</button>
+                <select name="quantity" class="quantitySelectorSmall"><option value="2" selected>2</option></select>
+              </div>
+            </li>
+          </ul>
+
+          <div class="orderTotals">
+            <div class="summaryLine"><span>Subtotal</span><span>R$579,78</span></div>
+            <div class="summaryLine"><span>Frete</span><span>Grátis</span></div>
+            <div class="summaryLine"><span>Taxas</span><span>R$120,00</span></div>
+            <div class="summaryTotal"><span>Total</span><span>R$699,98</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coluna da Direita: Detalhes do Pagamento -->
+      <aside class="paymentDetails">
+        <div class="column-content">
+          <div class="paymentTabs">
+            <input type="radio" id="pay-card" name="payment-method" checked>
+            <label for="pay-card" class="paymentTabButton">Pague com cartão</label>
+            <input type="radio" id="pay-pix" name="payment-method">
+            <label for="pay-pix" class="paymentTabButton">Pague com Pix</label>
+          </div>
+
+          <div class="paymentContent" id="card-content">
+            <form>
+              <div class="formGroup">
+                <label for="card-number">Número do cartão</label>
+                <input type="text" id="card-number" class="formInput" placeholder="1234 1234 1234 1234">
+              </div>
+              <div class="formRow">
+                <div class="formGroup">
+                  <label for="card-expiry">Data de Expiração</label>
+                  <input type="text" id="card-expiry" class="formInput" placeholder="MM/AA">
+                </div>
+                <div class="formGroup">
+                  <label for="card-cvc">Código de segurança</label>
+                  <input type="text" id="card-cvc" class="formInput" placeholder="123">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="paymentContent" id="pix-content">
+            <div class="pixInfo">
+              <img src="src/Ícones/Pix.png" alt="Ícone Pix" class="pixIcon"></img>
+              <p class="pixTitle">Pagar com PIX</p>
+              <span class="pixBadge">APROVAÇÃO EM MINUTOS</span>
+            </div>
+          </div>
+
+          <div class="deliveryInfo">
+            <p class="infoTitle">Endereço de entrega</p>
+            <p>CEP 12345-300 - Campinas - SP</p>
+            <p>Entregue para - Alex Pinheiro</p>
+          </div>
+
+          <div class="paymentTotals-right">
+            <div class="summaryLine"><span>Subtotal</span><span>R$579,98</span></div>
+            <div class="summaryTotal"><span>Total</span><span>R$699,98</span></div>
+          </div>
+          
+          <div id="card-button-wrapper">
+            <button class="btnPrimary">PAGAR AGORA</button>
+          </div>
+          <div id="pix-button-wrapper">
+            <button class="btnPrimary">FINALIZAR COM PIX</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="mainFooter">
+    <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,575 @@
+/* =================================== */
+/* ESTILOS DA PÁGINA DE LOGIN ADMIN    */
+/* =================================== */
+
+/* Reset Básico e Configuração Global */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Container Principal (Split Screen) */
+.admin-login-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Painel da Esquerda (Formulário) */
+.login-form-panel {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin: 0 0 50px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.forgot-password-link {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #6c757d;
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Painel da Direita (Imagem) */
+.login-image-panel {
+  flex: 1;
+  background-image: url('src/Principal.png'); /* <<< ATUALIZE O CAMINHO DA IMAGEM AQUI */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .login-image-panel {
+    display: none; /* Esconde a imagem em telas de celular */
+  }
+  .login-form-panel {
+    flex: auto; /* Permite que o painel do formulário ocupe toda a tela */
+  }
+}
+/* =================================== */
+/* ESTILOS DO PAINEL ADMIN             */
+/* =================================== */
+
+.admin-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f7f8fa;
+}
+
+/* Header Fixo no Topo */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  flex-shrink: 0; /* Impede que o header encolha */
+}
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.user-info span {
+  font-weight: 700;
+}
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Container Principal (Sidebar + Conteúdo) */
+.admin-body-container {
+  display: flex;
+  flex-grow: 1; /* Faz este container ocupar o resto da altura */
+}
+
+/* Menu Lateral */
+.sidebar {
+  flex: 0 0 250px;
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  padding: 40px 30px;
+}
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-nav li a {
+  display: block;
+  padding: 15px 10px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+.sidebar-nav li a:hover {
+  color: #007bff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.sidebar-nav li a.active {
+  color: #007bff;
+}
+
+/* Conteúdo do Dashboard */
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.content-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 0 30px 0;
+}
+
+/* ALTERAÇÃO 1: Removido o fundo (background, border, padding) *
+
+/* ALTERAÇÃO 2: Limitado o tamanho da imagem e ajustado o escalonamento */
+.chart-card-full img {
+  width: 100%;
+  max-width: 800px; /* Limite de largura definido */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block;
+}
+
+
+/* ========================================= */
+/* ESTILOS DA PÁGINA DE PRODUTOS E MODAIS    */
+/* ========================================= */
+
+/* Cabeçalho da área de conteúdo */
+.main-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Botões e Labels estilizadas como botões */
+.btn, .btn-icon, label.btn, label.btn-icon {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.btn-primary, label.btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  display: inline-block;
+}
+.btn-primary:hover, label.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+.btn-secondary, label.btn-secondary {
+  background-color: white;
+  color: #6c757d;
+  border: 1px solid #ced4da;
+}
+.btn-secondary:hover, label.btn-secondary:hover {
+  background-color: #f8f9fa;
+}
+
+.btn-danger {
+  background-color: #c82333;
+  color: white;
+}
+.btn-danger:hover {
+  background-color: #bb2d3b;
+}
+
+/* Barra de Busca */
+.search-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.search-bar i {
+  color: #6c757d;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 1rem;
+}
+
+/* Lista de Produtos */
+.product-list-header {
+  padding: 0 20px 10px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+}
+
+.product-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.product-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.product-name {
+  font-weight: 700;
+}
+.product-artist {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 120px;
+}
+.product-price {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.product-stock {
+  font-size: 0.8rem;
+  color: #198754;
+  font-weight: 700;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-left: 40px;
+}
+.btn-icon, label.btn-icon {
+  background-color: #f8f9fa;
+  color: #343a40;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+.btn-icon:hover, label.btn-icon:hover {
+  background-color: #e2e6ea;
+}
+
+.view-more-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #343a40;
+  font-weight: 700;
+  text-decoration: none;
+}
+.view-more-link i {
+  margin-left: 5px;
+}
+
+/* --- ESTILOS DE MODAL COM CHECKBOX HACK --- */
+.modal-toggle {
+  display: none; /* Esconde o checkbox */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none; /* Oculto por padrão */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Regra MÁGICA: Mostra o modal quando o checkbox correspondente está marcado */
+#add-modal-toggle:checked ~ #add-product-modal,
+#edit-modal-toggle:checked ~ #edit-product-modal,
+#delete-modal-toggle:checked ~ #delete-confirm-modal {
+  display: flex;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-weight: 900;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.modal-body {
+  display: flex;
+  gap: 30px;
+}
+
+.modal-image-section { flex-basis: 40%; }
+.image-dropzone { border: 2px dashed #ced4da; border-radius: 8px; padding: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin-bottom: 15px; color: #6c757d; }
+.image-dropzone i { font-size: 2.5rem; margin-bottom: 10px; }
+.image-dropzone span { font-weight: 700; text-decoration: underline; }
+
+.file-preview { display: flex; align-items: center; border: 1px solid #ced4da; border-radius: 8px; padding: 10px; }
+.file-preview img { width: 40px; height: 40px; margin-right: 10px; }
+.file-preview .file-info { flex-grow: 1; }
+.file-preview .file-info span { display: block; font-weight: 500; }
+.file-preview .file-info small { color: #6c757d; }
+.file-preview > i { color: #dc3545; cursor: pointer; }
+
+.modal-form { flex-basis: 60%; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 700; margin-bottom: 8px; }
+.form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem; }
+
+.modal-footer { text-align: right; margin-top: 30px; }
+
+/* --- CSS CORRIGIDO PARA O MODAL DE DELETAR --- */
+.modal-content.modal-sm {
+  max-width: 520px;
+  padding: 24px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0 15px;
+}
+
+.modal-delete-icon {
+  grid-row: 1 / span 2;
+  font-size: 2.2rem;
+  color: #000000;
+  margin: 0;
+}
+
+.modal-content.modal-sm .modal-title {
+  grid-column: 2;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+}
+
+.modal-subtitle {
+  grid-column: 2;
+  color: #6c757d;
+  margin: 5px 0 0 0;
+}
+
+.modal-footer-delete {
+  grid-column: 1 / -1;
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-footer-delete .btn-secondary,
+.modal-footer-delete .modal-cancel-btn {
+  border-color: #343a40;
+  color: #343a40;
+  padding: 12px 24px;
+}
+
+/* --- AJUSTE PARA IGUALAR O TAMANHO DOS BOTÕES NO MODAL DE DELETAR --- */
+.modal-footer-delete .btn,
+.modal-footer-delete .modal-cancel-btn {
+    width: 120px; /* Define uma largura fixa para os botões */
+    text-align: center; /* Garante que o texto fique perfeitamente centralizado */
+}
+
+
+/* =================================== */
+/* ESTILOS DA PÁGINA DE USUÁRIOS       */
+/* =================================== */
+
+.user-list-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.user-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.user-list-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.user-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 10px 16px;
+  border-radius: 20px; /* Para o formato de pílula */
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse; /* Une as bordas das células */
+}
+
+.user-table th,
+.user-table td {
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+.user-table thead tr {
+  background-color: #f8f9fa;
+}
+
+.user-table th {
+  font-weight: 900;
+  color: #212529;
+}
+
+/* Remove a borda da última linha para um acabamento limpo */
+.user-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Ajuste fino no tamanho dos botões dentro da tabela */
+.user-table .btn-icon {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}

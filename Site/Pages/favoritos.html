@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Progressive - Itens Favoritados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="profilePage internal-page"></body>
+
+  <header class="mainHeader">
+   <nav class="navBar">
+      <ul class="navMenu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="contato.html">CONTATO</a></li>
+        <li><a href="sobre_nos.html">SOBRE NÓS</a></li>
+        <li>
+          <a href="carrinho.html">
+            <figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></figure>
+          </a>
+        </li>
+      </ul>
+      <div class="navIcons">
+        <a href="#">
+          <figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></figure>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <p class="breadcrumbs">
+        <a href="index.html">Home</a> → <a href="perfil.html">Perfil</a> → Favoritos
+      </p>
+
+      <div class="profileWrapper">
+        <!-- Coluna da Esquerda: Navegação do Perfil -->
+        <aside class="profileSidebar">
+          <div class="profile-menu-card">
+            <div class="userCard">
+              <figure class="userAvatar-small"><img src="src/Avatares/Avatar_Perfil.png" alt="Avatar do usuário"></img></figure>
+              <div class="userInfo">
+                <h2 class="userName">Alex Luna Pinheiro</h2>
+                <p class="userEmail">alex@gmail.com</p>
+              </div>
+            </div>
+            <nav class="profileNav">
+              <ul>
+                <li><a href="perfil.html">INFORMAÇÕES DO PERFIL</a></li>
+                <li><a href="pedidos.html">HISTÓRICO DE PEDIDOS</a></li>
+                <li><a href="favoritos.html" class="active">ITENS FAVORITADOS</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="contactCard">
+            <img src="src/Ícones/Comentário.png" alt="Ícone de contato"></img>
+            <p>Entre em contato conosco em caso de dúvidas ou transtornos.</p>
+            <p>Acesse nossa página de contato:</p>
+            <a href="contato.html" class="contactButton">CONTATO</a>
+          </div>
+        </aside>
+
+        <!-- Coluna da Direita: Conteúdo Principal -->
+        <section class="profileContent">
+          <h1 class="contentTitle">FAVORITOS:</h1>
+          
+          <div class="favoritesGrid">
+            <!-- Os cards de produto são reutilizados aqui -->
+            <a href="produto.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/Led_Zepellin.png" alt="Led Zeppelin I"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 143,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">Led Zeppelin</p><p class="productYear">(1966)</p>
+                    <p class="productArtist">LED ZEPPELIN</p><p class="productLabel">Atlantic Records</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+            <a href="produto.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/Close_To_The_Edge.png" alt="Close To The Edge"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 136,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">Close To The Edge</p><p class="productYear">(1972)</p>
+                    <p class="productArtist">YES</p><p class="productLabel">Atlantic Records</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+            <a href="produto.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/Thick_As_Brick.png" alt="Thick As A Brick"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 71,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">Thick As Brick</p><p class="productYear">(1971)</p>
+                    <p class="productArtist">JETHRO TULL</p><p class="productLabel">Chrysalis Records</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+            <a href="produto.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/The_Wall.png" alt="The Wall"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 85,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">The Wall</p><p class="productYear">(1979)</p>
+                    <p class="productArtist">PINK FLOYD</p><p class="productLabel">Columbia Records</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+            <a href="produto.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/The_ConstruKction_of_Light.png" alt="The ConstruKction of Light"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 83,50</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">The ConstruKction of Light</p><p class="productYear">(2000)</p>
+                    <p class="productArtist">KING CRIMSON</p><p class="productLabel">Virgin Records</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+            <a href="produto.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/" alt="Beat"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 136,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">Beat</p><p class="productYear">(1982)</p>
+                    <p class="productArtist">KING CRIMSON</p><p class="productLabel">E.G Records</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mainFooter">
+    <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
+  </footer>
+
+</body>
+</html>

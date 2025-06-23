@@ -53,8 +53,334 @@ figure {
   transition: color 0.4s ease, text-shadow 0.3s ease;
 }
 
+
+/* ==================================================== */
+/* COMPONENTES COMPARTILHADOS (CARROSSEL, CARDS, BANNERS) */
+/* ==================================================== */
+.productCarouselSection {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.productList {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px calc((100vw - 1200px) / 2 + 20px);
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+.productList::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselArrow {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carouselArrow.prev {
+  left: 2%;
+}
+
+.carouselArrow.next {
+  right: 2%;
+}
+
+.productCard {
+  flex: 0 0 250px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  text-align: left;
+  padding: 1rem;
+  transition: 200ms ease-in;
+}
+.productCard article {
+  display: contents; /* Para o article não interferir no layout */
+}
+
+
+.productCard:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.productImageWrapper {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.productImageWrapper img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
+
+.favoriteBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productPrice {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.productInfoGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 10px;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.productInfoGrid p {
+  margin: 0;
+}
+
+.productAlbum,
+.productArtist {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.productYear,
+.productLabel {
+  text-align: right;
+}
+
+#loginCtaBanner {
+  background-image: url("src/Banners/Login.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 1920 / 525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#loginCtaBanner h1 {
+  font-size: 80px;
+  color: #1a1a1a;
+}
+
+#bandLogos {
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+/* MODIFICAÇÃO: Regra específica para o título da seção de bandas */
+#bandLogos .sectionTitle {
+  font-weight: 400;     /* Define uma espessura normal */
+  text-align: center;   /* Centraliza o texto */
+  font-size: 1.8rem;
+  color: #000;
+  margin: 0 auto 50px auto;
+}
+
+.logoList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.logoList img {
+  max-height: 35px;
+  transition: all 0.3s ease;
+}
+
+.logoList a:hover img {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+#discoverBanner {
+  position: relative;
+  min-height: 350px;
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#discoverBanner .container {
+  position: relative;
+  z-index: 2;
+}
+
+#discoverBanner h2 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+}
+
+.discoverBtn {
+  background-color: #fff;
+  color: #1a1a1a;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mainFooter {
+  padding: 30px 20px;
+  background-color: #1a1a1a;
+  color: #aaa;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.mainFooter p {
+  margin: 0;
+}
+
+/* ==================================================== */
+/* ESTILOS UNIFICADOS PARA PÁGINAS INTERNAS             */
+/* ==================================================== */
+
+/* Aplica a cor de fundo e texto a todas as páginas internas */
+.internal-page { 
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+/* Aplica o header branco a todas as páginas internas */
+.internal-page .mainHeader { 
+  background-color: #fff;
+}
+
+/* Estiliza a navBar de todas as páginas internas */
+.internal-page .navBar { 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+/* Estiliza os links do menu de todas as páginas internas */
+.internal-page .navMenu a { 
+  color: #333;
+}
+.internal-page .navMenu a:hover { 
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Posiciona os ícones em todas as páginas internas */
+.internal-page .navIcons { 
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Define os ícones pretos para todas as páginas internas */
+.internal-page .iconCart { 
+  content: url('src/Ícones/Carrinho_De_Compras_Preto.png');
+}
+.internal-page .iconUser { 
+  content: url('src/Ícones/User_Preto.png');
+}
+
+/* Título principal das páginas */
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+/* Botão primário (azul/gradiente) */
+.btnPrimary {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Estilo padrão para inputs de formulário */
+.formInput {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.formInput:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+
 /* =================================== */
-/* ESTILOS DA HOME PAGE                */
+/* ESTILOS DA TELA HOME              */
 /* =================================== */
 .homePage {
   background-color: #0c0c1e;
@@ -319,9 +645,9 @@ figure {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.bgPinkFloyd { background: linear-gradient(145deg, #0d4a74, #002d4a); }
-.colorPinkFloyd { background: linear-gradient(145deg, #36a3eb, #005c97); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.btnPinkFloyd { background: linear-gradient(145deg, #36a3eb, #005c97); }
+.bgPinkFloyd { background: linear-gradient(145deg, #0A78D6, #053F70); }
+.colorPinkFloyd { background: linear-gradient(145deg, #0A78D6, #053F70); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.btnPinkFloyd { background: linear-gradient(145deg, #0A78D6, #053F70); }
 .bgRush { background: linear-gradient(145deg, #3c1918, #1a0000); }
 .colorRush { color: #a94442; }
 .btnRush { background: linear-gradient(145deg, #c9302c, #a94442); }
@@ -351,6 +677,13 @@ figure {
   flex-basis: 350px;
   filter: grayscale(100%);
 }
+
+/* Novas classes para as imagens de fundo dos artistas */
+.artist-king-crimson { background-image: url('src/Artistas/Banner/King_Crimson.png'); }
+.artist-rush { background-image: url('src/Artistas/Banner/Rush.png'); }
+.artist-porcupine-tree { background-image: url('src/Artistas/Banner/Porcupine_Tree.png'); }
+.artist-tool { background-image: url('src/Artistas/Banner/Tool.png'); }
+
 
 .artistCardName {
   position: absolute;
@@ -479,69 +812,6 @@ figure {
   color: #aaa;
   text-align: right;
   z-index: 2;
-}
-
-/* ==================================================== */
-/* ESTILOS UNIFICADOS PARA PÁGINAS INTERNAS             */
-/* ==================================================== */
-.shopPage,
-.productPage,
-.categoryPage {
-  background-color: #fff;
-  color: #1a1a1a;
-}
-
-.shopPage .mainHeader,
-.productPage .mainHeader,
-.categoryPage .mainHeader {
-  background-color: #fff;
-}
-
-.shopPage .navBar,
-.productPage .navBar,
-.categoryPage .navBar {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  border-bottom: 1px solid #e9e9e9;
-}
-
-.shopPage .navMenu a,
-.productPage .navMenu a,
-.categoryPage .navMenu a {
-  color: #333;
-}
-
-.shopPage .navMenu a:hover,
-.productPage .navMenu a:hover,
-.categoryPage .navMenu a:hover {
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-}
-
-.shopPage .navIcons,
-.productPage .navIcons,
-.categoryPage .navIcons {
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.shopPage .iconCart,
-.productPage .iconCart,
-.categoryPage .iconCart {
-  content: url('src/Ícones/Carrinho_De_Compras_Preto.png');
-}
-
-.shopPage .iconUser,
-.productPage .iconUser,
-.categoryPage .iconUser {
-  content: url('src/Ícones/User_Preto.png');
 }
 
 /* ==================================================== */
@@ -928,230 +1198,6 @@ figure {
   margin: 0;
 }
 
-/* ==================================================== */
-/* COMPONENTES COMPARTILHADOS (CARROSSEL, CARDS, BANNERS) */
-/* ==================================================== */
-.productCarouselSection {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.carouselWrapper {
-  position: relative;
-  width: 100%;
-}
-
-.productList {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 10px calc((100vw - 1200px) / 2 + 20px);
-  box-sizing: border-box;
-  scrollbar-width: none;
-}
-
-.productList::-webkit-scrollbar {
-  display: none;
-}
-
-.carouselArrow {
-  position: absolute;
-  top: 35%;
-  transform: translateY(-50%);
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
-  line-height: 38px;
-  text-align: center;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.carouselArrow.prev {
-  left: 2%;
-}
-
-.carouselArrow.next {
-  right: 2%;
-}
-
-.productCard {
-  flex: 0 0 250px;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  text-align: left;
-  padding: 1rem;
-  transition: 200ms ease-in;
-}
-.productCard article {
-  display: contents; /* Para o article não interferir no layout */
-}
-
-
-.productCard:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.productImageWrapper {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.productImageWrapper img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  background-color: #f0f0f0;
-}
-
-.favoriteBtn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 1.2rem;
-  color: #333;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.productPrice {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-}
-
-.productInfoGrid {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2px 10px;
-  font-size: 0.8rem;
-  color: #6c757d;
-}
-
-.productInfoGrid p {
-  margin: 0;
-}
-
-.productAlbum,
-.productArtist {
-  font-weight: 700;
-  color: #1a1a1a;
-}
-
-.productYear,
-.productLabel {
-  text-align: right;
-}
-
-#loginCtaBanner {
-  background-image: url("src/Banners/Login.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 100%;
-  aspect-ratio: 1920 / 525;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#loginCtaBanner h1 {
-  font-size: 80px;
-  color: #1a1a1a;
-}
-
-#bandLogos {
-  border-top: 1px solid #e9e9e9;
-  border-bottom: 1px solid #e9e9e9;
-}
-
-/* MODIFICAÇÃO: Regra específica para o título da seção de bandas */
-#bandLogos .sectionTitle {
-  font-weight: 400;     /* Define uma espessura normal */
-  text-align: center;   /* Centraliza o texto */
-  font-size: 1.8rem;
-  color: #000;
-  margin: 0 auto 50px auto;
-}
-
-.logoList {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.logoList img {
-  max-height: 35px;
-  transition: all 0.3s ease;
-}
-
-.logoList a:hover img {
-  opacity: 0.7;
-  transform: scale(1.1);
-}
-
-#discoverBanner {
-  position: relative;
-  min-height: 350px;
-  background-color: #212121;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-#discoverBanner .container {
-  position: relative;
-  z-index: 2;
-}
-
-#discoverBanner h2 {
-  font-size: 2.5rem;
-  color: white;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin: 0 0 30px 0;
-}
-
-.discoverBtn {
-  background-color: #fff;
-  color: #1a1a1a;
-  padding: 15px 40px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.mainFooter {
-  padding: 30px 20px;
-  background-color: #1a1a1a;
-  color: #aaa;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.mainFooter p {
-  margin: 0;
-}
 
 /* =================================== */
 /* CSS PARA O PAINEL DE FILTROS        */
@@ -1413,6 +1459,1698 @@ figure {
 }
 
 
+
+
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DO CARRINHO (cartPage) */
+/* ==================================================== */
+.cartPage .container{
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.cartPage main{
+  padding-top: 60px; 
+}
+.cartWrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.cartItemsList {
+  flex-grow: 1;
+}
+.cartSubtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: -10px;
+}
+.itemsList {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0 0;
+}
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e9e9e9;
+}
+.cartItemImage {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+.cartItemImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cartItemDetails {
+  flex-grow: 1;
+}
+.cartItemDetails h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+.cartItemDetails p {
+  margin: 0;
+  color: #6c757d;
+}
+.cartItemPrice {
+  font-weight: 700;
+  color: #1a1a1a !important;
+  margin-top: 10px !important;
+}
+.cartItemControls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.iconButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+.iconButton.favorited {
+  color: #e44d26; /* Cor do coração preenchido */
+}
+.quantitySelectorSmall {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+.cartSummary {
+  width: 320px;
+  flex-shrink: 0;
+  border: 1px solid #e9e9e9;
+  border-radius: 8px;
+  padding: 25px;
+}
+.summaryTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9e9e9;
+}
+.summaryLine {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #6c757d;
+}
+.summaryLine a {
+  color: #007bff;
+  text-decoration: underline;
+}
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e9e9e9;
+}
+#cartRecommendations .sectionTitle {
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DE FINALIZAÇÃO DE COMPRA*/
+/* ==================================================== */
+.loginPage .container{
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.loginPage main{
+  padding-top: 60px; 
+}
+
+/* Estilo do título principal da página */
+.loginPage .pageTitle {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px; /* Aumenta o espaço entre as colunas */
+  margin-top: 30px;
+}
+.loginColumn {
+  width: 400px; /* Aumenta a largura das colunas */
+  text-align: center; /* Centraliza o conteúdo da coluna */
+}
+.loginColumn h2 {
+  font-size: 2rem; /* Aumenta o tamanho dos títulos das colunas */
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+/* Estilos específicos para os inputs da página de login */
+.loginPage .formInput {
+  text-align: left;
+  padding: 18px 20px; /* Aumenta o padding para mais altura */
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  font-size: 1rem;
+}
+.loginPage .formInput::placeholder {
+  color: #999;
+}
+
+/* Estilo para o link "Esqueci minha senha" */
+.forgotPassword {
+  display: block;
+  text-align: center; /* Centraliza o link */
+  margin-bottom: 25px; /* Aumenta o espaço abaixo */
+  margin-top: 5px; /* Adiciona um pequeno espaço acima */
+  color: #555;
+  text-decoration: underline;
+  font-size: 1rem; /* Aumenta o tamanho da fonte */
+}
+
+/* Estilos específicos para os botões da página de login */
+.loginPage .btnPrimary {
+  padding: 1.2rem; /* Deixa o botão mais alto */
+  border-radius: 8px;
+}
+
+.loginDivider {
+  align-self: center; /* Centraliza o divisor verticalmente */
+  border-left: 1px solid #e0e0e0;
+  height: 200px; /* Define uma altura fixa */
+}
+
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DE CHECKOUT (paymentPage) */
+/* ==================================================== */
+
+.paymentPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.paymentPage main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.paymentPage .mainHeader {
+  position: static;
+}
+.breadcrumbs-fullwidth {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* O container principal que cria o layout 50/50 */
+.paymentWrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
+/* Coluna da esquerda (cinza) */
+.paymentSummary {
+  flex: 1.5;
+  background-color: #f7f8fa;
+  display: flex;
+  justify-content: flex-end;
+  /* CORREÇÃO: Padding removido daqui para que a cor de fundo preencha a tela inteira */
+}
+
+/* Coluna da direita (branca) */
+.paymentDetails {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  /* CORREÇÃO: Padding removido daqui também */
+}
+
+/* Container de conteúdo interno para ambas as colunas */
+.column-content {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px; /* CORREÇÃO: Padding agora está aqui, garantindo o espaçamento interno do conteúdo */
+}
+
+.paymentSummary .pageTitle {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  font-weight: 900;
+}
+.summaryItemCount {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+.paymentSummary .itemsList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.paymentPage .cartItem {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.paymentSummary .orderTotals {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-top: none;
+}
+
+.orderTotals .summaryLine {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.orderTotals .summaryLine:last-child {
+  margin-bottom: 0;
+}
+.orderTotals .summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #000;
+  font-weight: 900;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+
+/* Sistema de Abas de Pagamento */
+.paymentTabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.paymentTabs input[type="radio"] {
+  display: none;
+}
+.paymentTabButton {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 700;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: #f7f8fa;
+}
+.paymentTabs input[type="radio"]:checked + .paymentTabButton {
+  color: #000;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+/* Conteúdo das Abas */
+.paymentContent {
+  display: none;
+}
+#pay-card:checked ~ #card-content,
+#pay-pix:checked ~ #pix-content {
+  display: block;
+}
+.formRow {
+  display: flex;
+  gap: 20px;
+}
+.formRow .formGroup {
+  flex: 1;
+}
+
+/* Estilos do conteúdo PIX */
+.pixInfo {
+  text-align: center;
+  padding: 40px 0;
+}
+.pixIcon {
+  height: 24px;
+  margin-bottom: 15px;
+}
+.pixTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.pixBadge {
+  display: inline-block;
+  background-color: #00bfff;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Seções compartilhadas na coluna da direita */
+.deliveryInfo {
+  border-top: 1px solid #e0e0e0;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+.infoTitle {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.deliveryInfo p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+.paymentTotals-right {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+  margin: 20px 0 30px 0;
+}
+.paymentTotals-right .summaryLine, .paymentTotals-right .summaryTotal {
+  display: flex;
+  justify-content: space-between;
+}
+.paymentTotals-right .summaryLine {
+  margin-bottom: 15px;
+  color: #555;
+}
+.paymentTotals-right .summaryTotal {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+/* Sistema para mostrar/esconder botões */
+#card-button-wrapper, #pix-button-wrapper {
+  display: none;
+}
+#pay-card:checked ~ #card-button-wrapper,
+#pay-pix:checked ~ #pix-button-wrapper {
+  display: block;
+}
+.paymentDetails .btnPrimary {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1rem;
+}
+
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA SOBRE NÓS (aboutPage)  */
+/* ==================================================== */
+.aboutSection {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.aboutSection.reverse {
+  flex-direction: row-reverse;
+}
+.aboutContent {
+  flex: 1;
+}
+.aboutTitle {
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 25px 0;
+  line-height: 1.2;
+}
+.aboutContent p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+  padding: 40px 0; /* Espaçamento vertical */
+  margin-bottom: 60px; /* Espaço antes da próxima seção */
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.iconGridItem img {
+  height: 32px;
+  margin-bottom: 10px;
+}
+.iconGridItem p {
+  margin: 0;
+  font-weight: 500;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.aboutImageWrapper,
+.aboutImageCollage {
+  flex: 0 0 45%;
+  position: relative;
+}
+.aboutImageWrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+.aboutImageCollage img {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: block;
+}
+.collage-bg {
+  width: 100%;
+}
+.collage-fg {
+  width: 60%;
+  position: absolute;
+  bottom: -40px;
+  border: 4px solid #fff;
+}
+.aboutSection:not(.reverse) .collage-fg {
+  left: -40px;
+}
+.aboutSection.reverse .collage-fg {
+  right: -40px;
+}
+
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DE CONTATO (contactPage) */
+/* ==================================================== */
+
+.contactPage main {
+  padding-top: 60px;
+}
+.contactPage .container {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  max-width: 800px; /* Um container mais estreito para páginas de texto/formulário */
+}
+
+/* Adiciona a classe .active-link para sublinhar a página ativa no menu */
+.navMenu a.active-link {
+  text-decoration: underline;
+  text-decoration-color: #000;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.contactSection {
+  margin-bottom: 50px;
+}
+
+.contactSection .pageTitle {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.contactInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.contactInfoItem p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.contactIconWrapper {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.contactIconWrapper img {
+  height: 24px;
+  width: auto;
+  opacity: 0.7;
+}
+
+.contactDivider {
+  border-top: 1px solid #e0e0e0;
+  margin: 60px 0;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formTextarea {
+  width: 100%;
+  height: 200px;
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.formTextarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.formSubmitButton {
+  max-width: 300px;
+}
+
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DE CHECKOUT (paymentPage) */
+/* ==================================================== */
+.paymentPage {
+  background-color: #f7f8fa; /* Cor de fundo cinza claro para a página */
+}
+.paymentPage main {
+  padding-top: 20px; /* Reduz o espaço superior */
+}
+.paymentPage .mainHeader {
+  position: static; /* Remove o header fixo nesta página */
+}
+.breadcrumbs-fullwidth {
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+  padding: 0 20px;
+}
+
+/* O container principal que cria o layout 50/50 */
+.paymentWrapper {
+  display: flex;
+  min-height: calc(100vh - 160px); /* Garante que ocupe a altura da tela */
+}
+
+/* Coluna da esquerda (cinza) */
+.paymentSummary {
+  flex: 1.5; /* Ocupa um pouco mais da metade */
+  background-color: #f7f8fa;
+  display: flex;
+  justify-content: flex-end; /* Alinha o conteúdo à direita */
+}
+
+/* Coluna da direita (branca) */
+.paymentDetails {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+/* Container de conteúdo interno para ambas as colunas */
+.column-content {
+  padding: 40px;
+  width: 100%;
+  max-width: 550px; /* Define uma largura máxima para o conteúdo */
+}
+
+.paymentSummary .pageTitle {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+.summaryItemCount {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+.paymentSummary .itemsList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.orderTotals {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+.orderTotals .summaryLine, .orderTotals .summaryTotal {
+  font-size: 1.1rem;
+}
+.orderTotals .summaryTotal {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+/* Sistema de Abas de Pagamento */
+.paymentTabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.paymentTabs input[type="radio"] {
+  display: none; /* Esconde os radio buttons */
+}
+.paymentTabButton {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 700;
+  border: 2px dashed #e0e0e0; /* Borda pontilhada para abas inativas */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+/* Estilo da aba ativa */
+.paymentTabs input[type="radio"]:checked + .paymentTabButton {
+  color: #000;
+  border-style: solid;
+  border-color: #000;
+  background-color: #fff;
+}
+
+/* Conteúdo das Abas */
+.paymentContent {
+  display: none; /* Esconde todos os conteúdos por padrão */
+}
+#pay-card:checked ~ #card-content,
+#pay-pix:checked ~ #pix-content {
+  display: block; /* Mostra o conteúdo da aba selecionada */
+}
+.formRow {
+  display: flex;
+  gap: 20px;
+}
+.formRow .formGroup {
+  flex: 1;
+}
+
+/* Estilos do conteúdo PIX */
+.pixInfo {
+  text-align: center;
+  padding: 30px 0;
+}
+.pixIcon {
+  height: 24px;
+  margin-bottom: 15px;
+}
+.pixTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.pixBadge {
+  display: inline-block;
+  background-color: #00bfff;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Seções compartilhadas */
+.deliveryInfo {
+  padding: 20px 0;
+  margin: 30px 0;
+}
+.infoTitle {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.deliveryInfo p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+.paymentTotals-right {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+.paymentTotals-right .summaryLine, .paymentTotals-right .summaryTotal {
+  font-weight: 700;
+}
+.paymentTotals-right .summaryLine {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.paymentTotals-right .summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+/* Sistema para mostrar/esconder botões */
+#card-button-wrapper, #pix-button-wrapper {
+  display: none;
+}
+#pay-card:checked ~ #card-button-wrapper,
+#pay-pix:checked ~ #pix-button-wrapper {
+  display: block;
+}
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DE PERFIL (profilePage) */
+/* ==================================================== */
+.profilePage main {
+  background-color: #f7f8fa;
+  padding: 40px 0 60px 0;
+}
+.profileWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+.profileSidebar {
+  flex: 0 0 300px;
+}
+.profile-menu-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+/* CORREÇÃO: Layout do card de usuário com Flexbox */
+.userCard {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center; /* Alinha verticalmente a imagem e o texto */
+  gap: 15px; /* Espaço entre a imagem e o texto */
+}
+.userAvatar-small {
+  flex-shrink: 0; /* Impede que a imagem encolha */
+}
+.userAvatar-small img {
+  width: 60px; /* Tamanho ajustado conforme o design */
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userInfo {
+  text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+.userName {
+  margin: 0 0 4px 0; /* Espaço ajustado */
+  font-size: 1.1rem; /* Tamanho ajustado */
+  font-weight: 700;
+}
+.userEmail {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.profileNav ul {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+}
+.profileNav li a {
+  display: block;
+  padding: 18px 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+.profileNav li a:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.profileNav li a.active {
+  color: #007bff;
+}
+.contactCard {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+}
+.contactCard img {
+  height: 40px;
+  margin-bottom: 15px;
+}
+.contactCard p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+.contactButton {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+.contactButton:hover {
+  color: #007bff; ;
+}
+.profileContent {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px;
+  position: relative;
+}
+.contentTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0 0 40px 0;
+}
+.profileForm {
+  max-width: calc(100% - 200px);
+}
+.profileForm .formRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+.profileForm .formRow .formGroup {
+  flex: 1;
+}
+.profileForm .formGroup.full-width {
+  margin-bottom: 25px;
+}
+.mainProfilePic {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.mainProfilePic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.editPicButton {
+  position: absolute;
+  /* CORREÇÃO: Posição ajustada para fora da imagem */
+  bottom: -5px;
+  right: -5px;
+  /* CORREÇÃO: Estilos do círculo removidos */
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  transition: transform 0.2s;
+}
+.editPicButton:hover {
+  transform: scale(1.1);
+}
+.editPicButton img {
+  width: 24px; /* Tamanho do ícone ajustado */
+  height: 24px;
+  border: none;
+  box-shadow: none;
+}
+
+
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DE PERFIL (profilePage) */
+/* ==================================================== */
+.profilePage main {
+  background-color: #f7f8fa;
+  padding: 40px 0 60px 0;
+}
+.profileWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+.profileSidebar {
+  flex: 0 0 300px;
+}
+.profile-menu-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.userCard {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.userAvatar-small {
+  flex-shrink: 0;
+}
+.userAvatar-small img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userInfo {
+  text-align: left;
+}
+.userName {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.userEmail {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+.profileNav ul {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+}
+.profileNav li:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+}
+.profileNav li a {
+  display: block;
+  padding: 18px 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+.profileNav li a:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+.profileNav li a.active {
+  color: #007bff;
+  border-left-color: #007bff;
+}
+.contactCard {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+}
+.contactCard img {
+  height: 40px;
+  margin-bottom: 15px;
+}
+.contactCard p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+.contactButton {
+  display: inline-block;
+  padding: 8px 25px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+.contactButton:hover {
+  background-color: #333;
+  color: #fff;
+}
+.profileContent {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px;
+  position: relative;
+}
+.contentTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0 0 40px 0;
+}
+.profileForm {
+  max-width: calc(100% - 200px);
+}
+.profileForm .formRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+.profileForm .formRow .formGroup {
+  flex: 1;
+}
+.profileForm .formGroup.full-width {
+  margin-bottom: 25px;
+}
+.mainProfilePic {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.mainProfilePic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.editPicButton {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  transition: transform 0.2s;
+}
+.editPicButton:hover {
+  transform: scale(1.1);
+}
+.editPicButton img {
+  width: 24px;
+  height: 24px;
+  border: none;
+  box-shadow: none;
+}
+
+/* NOVO: Estilos para a grade de favoritos */
+.favoritesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+/* Ajuste no card de produto para remover padding extra dentro da grade */
+.favoritesGrid .productCard {
+  padding: 0;
+}
+
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DE PERFIL (profilePage) */
+/* ==================================================== */
+.profilePage main {
+  background-color: #f7f8fa;
+  padding: 40px 0 60px 0;
+}
+.profileWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+.profileSidebar {
+  flex: 0 0 300px;
+}
+.profile-menu-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.userCard {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.userAvatar-small {
+  flex-shrink: 0;
+}
+.userAvatar-small img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userInfo {
+  text-align: left;
+}
+.userName {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.userEmail {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+.profileNav ul {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+}
+.profileNav li:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+}
+.profileNav li a {
+  display: block;
+  padding: 18px 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+.profileNav li a:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+.profileNav li a.active {
+  color: #007bff;
+  border-left-color: #007bff;
+}
+.contactCard {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+}
+.contactCard img {
+  height: 40px;
+  margin-bottom: 15px;
+}
+.contactCard p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+.contactButton {
+  display: inline-block;
+  padding: 8px 25px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+.contactButton:hover {
+  background-color: #333;
+  color: #fff;
+}
+.profileContent {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px;
+  position: relative;
+}
+.contentTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0 0 30px 0;
+}
+.profileForm {
+  max-width: calc(100% - 200px);
+}
+.profileForm .formRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+.profileForm .formRow .formGroup {
+  flex: 1;
+}
+.profileForm .formGroup.full-width {
+  margin-bottom: 25px;
+}
+.mainProfilePic {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.mainProfilePic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.editPicButton {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  transition: transform 0.2s;
+}
+.editPicButton:hover {
+  transform: scale(1.1);
+}
+.editPicButton img {
+  width: 24px;
+  height: 24px;
+  border: none;
+  box-shadow: none;
+}
+.favoritesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+.favoritesGrid .productCard {
+  padding: 0;
+}
+
+/* Estilos para a lista de histórico de pedidos */
+.orderList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.orderCard {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.orderStatus {
+  background-color: #007bff;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.orderInfo {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+.orderInfo span {
+  margin-right: 20px;
+}
+.orderTotal {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.orderTotal strong {
+  font-weight: 900;
+}
+.orderItems {
+  padding: 20px;
+}
+
+/* CORREÇÃO: Layout do item do pedido */
+.orderItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.orderItem-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.orderItem-details {
+  flex-grow: 1; /* Faz esta div ocupar o espaço disponível */
+}
+.orderItem-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.orderItem-details p, .orderItem-details span {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.orderDetailsButton {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* Impede que o texto do botão quebre linha */
+}
+.orderDetailsButton:hover {
+  background-color: #f0f0f0;
+  border-color: #aaa;
+}
+
+
+/* ==================================================== */
+/* ESTILOS DA PÁGINA DE RASTREAMENTO (trackingPage)     */
+/* ==================================================== */
+.trackingPage main {
+  padding: 40px 0 60px 0;
+}
+.trackingPage .pageTitle {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+.trackingWrapper {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+.trackingDetails {
+  flex: 1.5;
+}
+.trackingMapArea {
+  flex: 1;
+}
+.map-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  background-image: url('src/Banners/Mapa.png');
+  background-size: cover;
+  background-position: center;
+}
+.detailBlock {
+  margin-bottom: 30px;
+}
+.detailBlock label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  display: block;
+  margin-bottom: 5px;
+}
+.detailBlock p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.idBlock {
+  background-color: #f7f8fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+.idBlock p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  word-break: break-all;
+}
+.trackingItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.trackingItem-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.trackingItem-details {
+  flex-grow: 1;
+}
+.trackingItem-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+}
+.trackingItem-details p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 1rem;
+}
+.trackingItem-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.trackingTotals {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #f7f8fa;
+  border-radius: 8px;
+}
+.trackingTotals .summaryLine {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+}
+.trackingTotals .summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+.timelineTitle {
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+  font-weight: 900;
+}
+.trackingTimeline {
+  list-style: none;
+  padding-left: 15px;
+  position: relative;
+}
+.trackingTimeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  bottom: 5px;
+  width: 2px;
+  /* CORREÇÃO: Linha agora é pontilhada */
+  background-image: linear-gradient(to bottom, #ccc 50%, transparent 50%);
+  background-size: 2px 8px;
+}
+.timeline-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 30px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 10px; /* Tamanho ajustado */
+  height: 10px; /* Tamanho ajustado */
+  border-radius: 50%;
+  /* CORREÇÃO: Fundo transparente e borda cinza para itens inativos */
+  background-color: #fff;
+  border: 2px solid #ccc;
+}
+.timeline-item.active::before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.timeline-item.active h3 {
+  color: #007bff;
+}
+.timeline-info h3 {
+  font-size: 1rem;
+  margin: 0 0 5px 0;
+  /* CORREÇÃO: Removida a transformação de texto para minúsculas */
+  text-transform: none; 
+  font-weight: 900; /* Deixando o título em negrito */
+}
+.timeline-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.timeline-date {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+/* ==================================================== */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DE CADASTRO (checkoutPage) */
+/* ==================================================== */
+.checkoutPage .container{
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.checkoutPage main{
+  padding-top: 60px; 
+}
+
+/* Centraliza o título principal da página */
+.checkoutPage .pageTitle {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+}
+
+.checkoutWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+}
+.checkoutColumn {
+  /* Adiciona a borda para criar as "caixas" */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px;
+}
+.infoColumn {
+  flex: 2; /* A coluna da esquerda ocupa mais espaço */
+}
+.accountColumn {
+  flex: 1; /* A coluna da direita ocupa menos espaço */
+}
+
+/* Estilo para os títulos das colunas (SUAS INFORMAÇÕES, etc.) */
+.columnTab {
+  font-size: 1.1rem; /* Tamanho da fonte ajustado */
+  font-weight: 700;
+  margin: 0 0 30px 0; /* Remove margens negativas, mantém só a inferior */
+  padding-bottom: 15px; /* Espaço para a linha de borda */
+  border-bottom: 1px solid #e0e0e0; /* Linha separadora padrão */
+  text-transform: uppercase;
+}
+/* Estilo específico para a aba ativa, com a borda preta mais grossa */
+.columnTab.active {
+  border-bottom: 2px solid #000;
+}
+
+/* Define o layout de grid para o formulário da esquerda */
+.registrationForm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px 25px; /* Espaçamento entre linhas e colunas */
+  align-items: end; 
+}
+.formGroup {
+  text-align: left;
+}
+/* Classes para fazer um campo ocupar mais de uma coluna no grid */
+.formGroup.col-span-2 {
+  grid-column: span 2;
+}
+.formGroup.col-span-3 {
+  grid-column: span 3;
+}
+.formGroup label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.75rem; /* Fonte menor para as labels */
+  margin-bottom: 8px; /* Espaço entre a label e o campo */
+  text-transform: uppercase;
+  color: #555;
+}
+.formGroup .formInput {
+  margin-bottom: 0;
+}
+
+/* Estilo para os inputs cinzas/desabilitados */
+.formInput.formInput-gray {
+    background-color: #f5f5f5;
+    color: #888;
+}
+
+.radioGroup, .checkboxGroup {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.radioGroup label, .checkboxGroup label {
+  font-weight: 400;
+  text-transform: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem; /* Fonte menor para as opções */
+  color: #333;
+}
+.dateSelector {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr; /* Ajuste do grid para data */
+  gap: 10px;
+}
+
+/* Ajustes no botão da coluna da direita */
+.accountColumn .btnPrimary {
+  margin-top: 20px;
+}
+.accountColumn .formGroup {
+  margin-bottom: 20px; /* Aumenta o espaçamento entre os campos da direita */
+}
+.accountColumn .checkboxGroup {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* ==================================================== */
+/* ESTILOS DE VALIDAÇÃO DE FORMULÁRIO (APENAS BOTÃO)    */
+/* ==================================================== */
+
+/* Desabilita o botão "CADASTRAR" enquanto houver qualquer campo obrigatório não preenchido no formulário. */
+form:invalid .btnPrimary {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* =================================== */
 /* MEDIA QUERIES GLOBAIS               */
 /* =================================== */
@@ -1520,4 +3258,54 @@ figure {
   #discoverBanner h2 {
     font-size: 2rem;
   }
+  
+  /* Media queries para as novas páginas */
+  .cartWrapper, .checkoutWrapper {
+    flex-direction: column;
+  }
+  .cartSummary, .checkoutColumn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .loginContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .loginDivider {
+    display: none;
+  }
+  .loginColumn {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .registrationForm {
+    grid-template-columns: 1fr; /* Coluna única em telas menores */
+  }
+  .cartItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cartItemControls {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.categoryPageTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 20px 0 50px 0;
+  color: #1a1a1a;
+}
+
+
+
+#cartRecommendations .sectionTitle {
+  text-align: center;
 }

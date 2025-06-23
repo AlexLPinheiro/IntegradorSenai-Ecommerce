@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Progressive - Admin Produtos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Adicionando a biblioteca de ícones para facilitar -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-page">
+
+  <header class="admin-header">
+    <h1 class="header-title">Admin</h1>
+    <div class="user-info">
+      <span>Vinil da Silva</span>
+      <img src="src/usuário.png" alt="Avatar do Admin">
+    </div>
+  </header>
+
+  <div class="admin-body-container">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="dashboards.html">DASHBOARDS</a></li>
+          <li><a href="usuarios.html">USUÁRIOS</a></li>
+          <li><a href="#" class="active">PRODUTOS</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="dashboard-content">
+      <!-- Checkboxes invisíveis para controlar os modais -->
+      <input type="checkbox" id="add-modal-toggle" class="modal-toggle">
+      <input type="checkbox" id="edit-modal-toggle" class="modal-toggle">
+      <input type="checkbox" id="delete-modal-toggle" class="modal-toggle">
+
+      <div class="main-header-actions">
+        <h2 class="content-title">LISTA DE PRODUTOS:</h2>
+        <!-- Este botão agora é uma label que ativa o checkbox do modal -->
+        <label for="add-modal-toggle" class="btn btn-primary">ADICIONAR PRODUTO</label>
+      </div>
+
+      <div class="search-container">
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Pesquisar produto">
+        </div>
+      </div>
+
+      <div class="product-list-header">
+        <span class="header-product-name">Nome do produto:</span>
+      </div>
+
+      <div class="product-list">
+        <!-- Item de Produto -->
+        <div class="product-item">
+          <!-- CORREÇÃO: Adicionado o atributo 'alt' na tag da imagem -->
+          <img src="src/The_Dark_Side_Of_The_Moon_Frente 1.png" alt="Capa The Dark Side of the Moon" class="product-image">
+          <div class="product-info">
+            <span class="product-name">THE DARK SIDE OF THE MOON</span>
+            <span class="product-artist">Pink Floyd</span>
+          </div>
+          <div class="product-details">
+            <span class="product-price">R$137,89</span>
+            <span class="product-stock">EM ESTOQUE</span>
+          </div>
+          <div class="product-actions">
+            <label for="delete-modal-toggle" class="btn btn-icon"><i class="fa-solid fa-trash-can"></i> Deletar</label>
+            <label for="edit-modal-toggle" class="btn btn-icon"><i class="fa-solid fa-pencil"></i> Editar</label>
+          </div>
+        </div>
+      
+        <div class="product-item">
+          <img src="src/The_Dark_Side_Of_The_Moon_Frente 1.png" alt="Capa The Dark Side of the Moon" class="product-image">
+          <div class="product-info">
+            <span class="product-name">THE DARK SIDE OF THE MOON</span>
+            <span class="product-artist">Pink Floyd</span>
+          </div>
+          <div class="product-details">
+            <span class="product-price">R$137,89</span>
+            <span class="product-stock">EM ESTOQUE</span>
+          </div>
+          <div class="product-actions">
+            <label for="delete-modal-toggle" class="btn btn-icon"><i class="fa-solid fa-trash-can"></i> Deletar</label>
+            <label for="edit-modal-toggle" class="btn btn-icon"><i class="fa-solid fa-pencil"></i> Editar</label>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="src/The_Dark_Side_Of_The_Moon_Frente 1.png" alt="Capa The Dark Side of the Moon" class="product-image">
+          <div class="product-info">
+            <span class="product-name">THE DARK SIDE OF THE MOON</span>
+            <span class="product-artist">Pink Floyd</span>
+          </div>
+          <div class="product-details">
+            <span class="product-price">R$137,89</span>
+            <span class="product-stock">EM ESTOQUE</span>
+          </div>
+          <div class="product-actions">
+            <label for="delete-modal-toggle" class="btn btn-icon"><i class="fa-solid fa-trash-can"></i> Deletar</label>
+            <label for="edit-modal-toggle" class="btn btn-icon"><i class="fa-solid fa-pencil"></i> Editar</label>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="src/The_Dark_Side_Of_The_Moon_Frente 1.png" alt="Capa The Dark Side of the Moon" class="product-image">
+          <div class="product-info">
+            <span class="product-name">THE DARK SIDE OF THE MOON</span>
+            <span class="product-artist">Pink Floyd</span>
+          </div>
+          <div class="product-details">
+            <span class="product-price">R$137,89</span>
+            <span class="product-stock">EM ESTOQUE</span>
+          </div>
+          <div class="product-actions">
+            <label for="delete-modal-toggle" class="btn btn-icon"><i class="fa-solid fa-trash-can"></i> Deletar</label>
+            <label for="edit-modal-toggle" class="btn btn-icon"><i class="fa-solid fa-pencil"></i> Editar</label>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="view-more-link">ver mais <i class="fa-solid fa-chevron-down"></i></a>
+      
+      <!-- MODAIS (Popups) - Posicionados aqui para o CSS funcionar -->
+
+      <!-- Modal de Adicionar Produto -->
+      <div id="add-product-modal" class="modal-overlay">
+        <div class="modal-content">
+          <label for="add-modal-toggle" class="modal-close-btn">×</label>
+          <h3 class="modal-title">CADASTRO DO PRODUTO:</h3>
+          <div class="modal-body">
+            <div class="modal-image-section">
+              <div class="image-dropzone">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                <span>ADICIONE A IMAGEM</span>
+              </div>
+              <div class="file-preview">
+                <img src="src/Close_To_The_Edge.png" alt="preview">
+                <div class="file-info">
+                  <span>Close To The Edge.PNG</span>
+                  <small>428 KB</small>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
+            </div>
+            <form class="modal-form">
+              <div class="form-group"><label for="prod-name">Nome do Produto:</label><input type="text" id="prod-name" value="Close To The Edge"></div>
+              <div class="form-group"><label for="prod-category">Categoria</label><select id="prod-category"><option>Clássico</option></select></div>
+              <div class="form-group"><label for="prod-price">Preço:</label><input type="text" id="prod-price" value="R$148,87"></div>
+              <div class="form-group"><label for="prod-label">Gravadora:</label><input type="text" id="prod-label" value="R$148,87"></div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary">ADICIONAR PRODUTO</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal de Edição de Produto -->
+      <div id="edit-product-modal" class="modal-overlay">
+        <div class="modal-content">
+          <label for="edit-modal-toggle" class="modal-close-btn">×</label>
+          <h3 class="modal-title">EDIÇÃO DO PRODUTO:</h3>
+          <!-- CORREÇÃO: Conteúdo do modal de edição adicionado aqui -->
+          <div class="modal-body">
+            <div class="modal-image-section">
+              <div class="image-dropzone">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                <span>ADICIONE A IMAGEM</span>
+              </div>
+              <div class="file-preview">
+                <img src="src/Close_To_The_Edge.png" alt="preview">
+                <div class="file-info">
+                  <span>Close To The Edge.PNG</span>
+                  <small>428 KB</small>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
+            </div>
+            <form class="modal-form">
+              <div class="form-group"><label for="edit-prod-name">Nome do Produto:</label><input type="text" id="edit-prod-name" value="Close To The Edge"></div>
+              <div class="form-group"><label for="edit-prod-category">Categoria</label><select id="edit-prod-category"><option>Clássico</option></select></div>
+              <div class="form-group"><label for="edit-prod-price">Preço:</label><input type="text" id="edit-prod-price" value="R$148,87"></div>
+              <div class="form-group"><label for="edit-prod-label">Gravadora:</label><input type="text" id="edit-prod-label" value="R$148,87"></div>
+            </form>
+          </div>
+          <div class="modal-footer"><button class="btn btn-primary">SALVAR ALTERAÇÕES</button></div>
+        </div>
+      </div>
+
+      <!-- Modal de Confirmação de Exclusão -->
+      <div id="delete-confirm-modal" class="modal-overlay">
+        <div class="modal-content modal-sm">
+          <i class="fa-solid fa-trash-can modal-delete-icon"></i>
+          <h3 class="modal-title">Tem certeza que quer deletar esse item do catálogo?</h3>
+          <p class="modal-subtitle">Essa ação não pode ser desfeita.</p>
+          <div class="modal-footer-delete">
+            <label for="delete-modal-toggle" class="btn btn-secondary modal-cancel-btn">CANCELAR</label>
+            <button class="btn btn-danger">DELETAR</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
