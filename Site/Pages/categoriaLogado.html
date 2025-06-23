@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Progressive - Categoria Sinfônico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="categoryPage internal-page">
+
+  <header class="mainHeader">
+    <nav class="navBar">
+      <ul class="navMenu">
+        <li><a href="homeLogado.html">HOME</a></li>
+        <li><a href="shopLogado.html">SHOP</a></li>
+        <li><a href="contatoLogado.html">CONTATO</a></li>
+        <li><a href="sobreNosLogado.html">SOBRE NÓS</a></li>
+        <li>
+          <a href="carrinhoLogado.html">
+            <figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></figure>
+          </a>
+        </li>
+      </ul>
+      <div class="navIcons">
+        <a href="perfil.html">
+          <figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></figure>
+        </a>
+      </div>
+    </nav>
+
+    <div class="shopHeaderControls">
+      <div class="container">
+        <p class="breadcrumbs">
+          <a href="homeLogado.html">Home</a> → <a href="shopLogado.html">Shop</a> → Sinfônico
+        </p>
+        <form class="searchBar" action="#">
+            <button type="submit" class="searchIconBtn" aria-label="Pesquisar"><img src="src/Ícones/Lupa.png" alt=""></button>
+            <input type="text" placeholder="Pesquise em progressive.com">
+        </form>
+        <label for="filterToggle" class="filterButton">
+          FILTROS
+          <img src="src/Ícones/Filtro.png" alt="">
+        </label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="filterToggle" class="filterToggleCheckbox">
+    <aside class="filterSidebar">
+        <!-- O conteúdo do filtro pode ser copiado do shop.html se necessário -->
+    </aside>
+    <label for="filterToggle" class="filterOverlay"></label>
+  </header>
+
+  <main>
+    <div class="container">
+        <!-- Título da página de categoria -->
+        <h1 class="categoryPageTitle">Álbuns da categoria "Sinfônico"</h1>
+    </div>
+
+    <section class="shopSection productCarouselSection" id="categoryHighlights">
+      <div class="container">
+        <h2 class="sectionTitle">DESTAQUES DA CATEGORIA:</h2>
+      </div>
+      <div class="carouselWrapper">
+        <button class="carouselArrow prev" aria-label="Anterior">←</button>
+        <div class="productList">
+            <a href="produtoLogado.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/Led_Zepellin.png" alt="Led Zeppelin I"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 143,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">Led Zeppelin</p><p class="productYear">(1966)</p>
+                    <p class="productArtist">LED ZEPPELIN</p><p class="productLabel">Atlantic Records</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+            <a href="produtoLogado.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/Close_To_The_Edge.png" alt="Close To The Edge"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 136,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">Close To The Edge</p><p class="productYear">(1972)</p>
+                    <p class="productArtist">YES</p><p class="productLabel">Atlantic Records</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+            <a href="produtoLogado.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/Thick_As_Brick.png" alt="Thick As A Brick"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 71,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">Thick As Brick</p><p class="productYear">(1971)</p>
+                    <p class="productArtist">JETHRO TULL</p><p class="productLabel">Chrysalis Records</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+            <a href="produtoLogado.html" class="productCard">
+              <article>
+                <figure class="productImageWrapper"><img src="src/Albuns/The_Wall.png" alt="The Wall"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                <div class="productDetails">
+                  <p class="productPrice">R$ 85,90</p>
+                  <div class="productInfoGrid">
+                    <p class="productAlbum">The Wall</p><p class="productYear">(1979)</p>
+                    <p class="productArtist">PINK FLOYD</p><p class="productLabel">Columbia Records</p>
+                  </div>
+                </div>
+              </article>
+            </a>
+        </div>
+        <button class="carouselArrow next" aria-label="Próximo">→</button>
+      </div>
+    </section>
+
+     <section class="shopSection" id="bandLogos">
+      <div class="container">
+        <h2 class="sectionTitle">ENCONTRE SUA BANDA FAVORITA:</h2>
+        <div class="logoList">
+          <a href="#"><img src="src/Bandas/tool.png" alt="Tool Logo"></a>
+          <a href="#"><img src="src/Bandas/Pink Floyd.png" alt="Pink Floyd Logo"></a>
+          <a href="#"><img src="src/Bandas/led Zeppelin.png" alt="Led Zeppelin Logo"></a>
+          <a href="#"><img src="src/Bandas/yes.png" alt="Yes Logo"></a>
+          <a href="#"><img src="src/Bandas/opeth.jpg" alt="Opeth Logo"></a>
+          <a href="#"><img src="src/Bandas/rush.png" alt="Rush Logo"></a>
+          <a href="#"><img src="src/Bandas/dream Theater.png" alt="Dream Theater Logo"></a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="shopSection productCarouselSection" id="categoryReleases">
+      <div class="container">
+        <h2 class="sectionTitle">LANÇAMENTOS DO GÊNERO:</h2>
+      </div>
+      <div class="carouselWrapper">
+        <button class="carouselArrow prev" aria-label="Anterior">←</button>
+        <div class="productList">
+          <a href="produtoLogado.html" class="productCard">
+            <article>
+              <figure class="productImageWrapper"><img src="src/Albuns/Age_Of_Fragility.png" alt="Age of Fragility"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+              <div class="productDetails">
+                <p class="productPrice">R$ 143,90</p>
+                <div class="productInfoGrid">
+                  <p class="productAlbum">Age of Fragility</p><p class="productYear">(2025)</p>
+                  <p class="productArtist">MARCO MATTEI</p><p class="productLabel">7D MEDIA</p>
+                </div>
+              </div>
+            </article>
+          </a>
+          <a href="produtoLogado.html" class="productCard">
+            <article>
+              <figure class="productImageWrapper"><img src="src/Albuns/Who.png" alt="Who?"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+              <div class="productDetails">
+                <p class="productPrice">R$ 136,90</p>
+                <div class="productInfoGrid">
+                  <p class="productAlbum">Who?</p><p class="productYear">(2025)</p>
+                  <p class="productArtist">ZOLAR CZACK</p><p class="productLabel">Denis Furzov</p>
+                </div>
+              </div>
+            </article>
+          </a>
+          <a href="produtoLogado.html" class="productCard">
+            <article>
+              <figure class="productImageWrapper"><img src="src/Albuns/Camel.png" alt="Camel"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+              <div class="productDetails">
+                <p class="productPrice">R$ 71,90</p>
+                <div class="productInfoGrid">
+                  <p class="productAlbum">Camel</p><p class="productYear">(2025)</p>
+                  <p class="productArtist">BRAS CAMEL</p><p class="productLabel">Eeualizer Records</p>
+                </div>
+              </div>
+            </article>
+          </a>
+          <a href="produtoLogado.html" class="productCard">
+            <article>
+              <figure class="productImageWrapper"><img src="src/Albuns/The_Last_will_And_Testament.png" alt="The Last Will and Testament"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+              <div class="productDetails">
+                <p class="productPrice">R$ 200,00</p>
+                <div class="productInfoGrid">
+                  <p class="productAlbum">The Last Will and Testament</p><p class="productYear">(2024)</p>
+                  <p class="productArtist">OPETH</p><p class="productLabel">Napalm Records</p>
+                </div>
+              </div>
+            </article>
+          </a>  
+        </div>
+        <button class="carouselArrow next" aria-label="Próximo">→</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mainFooter">
+    <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
+  </footer>
+
+</body>
+</html>

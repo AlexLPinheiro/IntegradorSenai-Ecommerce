@@ -11,20 +11,27 @@
 </head>
 <body class="paymentPage internal-page">
 
-  <header class="mainHeader">
-    <nav class="navBar">
-      <ul class="navMenu">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="shop.html">SHOP</a></li>
-        <li><a href="contato.html">CONTATO</a></li>
-        <li><a href="sobre_nos.html">SOBRE NÓS</a></li>
-      </ul>
-      <div class="navIcons">
-        <a href="carrinho.html"><figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></img></figure></a>
-        <a href="perfil.html"><figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></img></figure></a>
-      </div>
-    </nav>
-  </header>
+ <header class="mainHeader">
+      <nav class="navBar">
+        <div class="navLeft"></div>
+        <ul class="navMenu">
+          <li><a href="homeLogado.html">HOME</a></li>
+          <li><a href="shopLogado.html">SHOP</a></li>
+          <li><a href="contatoLogado.html">CONTATO</a></li>
+          <li><a href="sobreNosLogado.html">SOBRE NÓS</a></li>
+          <li>
+            <a href="carrinhoLogado.html">
+              <figure><img src="src/Ícones/Carrinho_De_Compras_Branco.png" alt="Carrinho" class="iconImg iconCart"></img></figure>
+            </a>
+          </li>
+        </ul>
+        <div class="navIcons">
+          <a href="perfil.html">
+            <figure><img src="src/Ícones/User_Branco.png" alt="Perfil" class="iconImg iconUser"></img></figure>
+          </a>
+        </div>
+      </nav>
+    </header>
 
   <main>
     <p class="breadcrumbs breadcrumbs-fullwidth">
@@ -49,7 +56,9 @@
               <div class="cartItemControls">
                 <button class="iconButton" aria-label="Favoritar">♡</button>
                 <button class="iconButton" aria-label="Remover">×</button>
-                <select name="quantity" class="quantitySelectorSmall"><option value="1">1</option></select>
+                <select name="quantity" class="quantitySelectorSmall">
+                  <option value="1">1</option>
+                </select>
               </div>
             </li>
             <li class="cartItem">

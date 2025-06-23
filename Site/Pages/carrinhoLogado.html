@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Progressive - Seu Carrinho</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="cartPage internal-page">
+
+  <header class="mainHeader">
+    <nav class="navBar">
+      <ul class="navMenu">
+        <li><a href="homeLogado.html">HOME</a></li>
+        <li><a href="shopLogado.html">SHOP</a></li>
+        <li><a href="contatoLogado.html">CONTATO</a></li>
+        <li><a href="sobreNosLogado.html">SOBRE NÓS</a></li>
+        <li>
+          <a href="#">
+            <figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></figure>
+          </a>
+        </li>
+      </ul>
+      <div class="navIcons">
+        <a href="perfil.html">
+          <figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></figure>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <p class="breadcrumbs">
+        <a href="homeLogado.html">Home</a> → Carrinho
+      </p>
+
+      <div class="cartWrapper">
+        <!-- Coluna da Esquerda: Itens do Carrinho -->
+        <section class="cartItemsList">
+          <h1 class="pageTitle">SEU CARRINHO</h1>
+          <p class="cartSubtitle">TOTAL: (3 Itens) R$579,78</p>
+          <p>Clique em comprar agora para receber os itens de seu carrinho no conforto de sua casa</p>
+          
+          <ul class="itemsList">
+            <li class="cartItem">
+              <figure class="cartItemImage">
+                <img src="src/Albuns/The_Dark_Side_Of_The_Moon_Frente.jpg" alt="The Dark Side Of The Moon">
+              </figure>
+              <div class="cartItemDetails">
+                <h3>THE DARK SIDE OF THE MOON</h3>
+                <p>Pink Floyd</p>
+                <p class="cartItemPrice">R$137,89</p>
+              </div>
+              <div class="cartItemControls">
+                <button class="iconButton" aria-label="Favoritar">♡</button>
+                <button class="iconButton" aria-label="Remover">×</button>
+                <select name="quantity" class="quantitySelectorSmall">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </li>
+            <li class="cartItem">
+              <figure class="cartItemImage">
+                <img src="src/Albuns/Animals.jpg" alt="Animals">
+              </figure>
+              <div class="cartItemDetails">
+                <h3>ANIMALS</h3>
+                <p>Pink Floyd</p>
+                <p class="cartItemPrice">R$220,89</p>
+              </div>
+              <div class="cartItemControls">
+                <button class="iconButton favorited" aria-label="Desfavoritar">♥</button>
+                <button class="iconButton" aria-label="Remover">×</button>
+                <select name="quantity" class="quantitySelectorSmall">
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Coluna da Direita: Resumo da Compra -->
+        <aside class="cartSummary">
+          <h2 class="summaryTitle">RESUMO DA COMPRA:</h2>
+          <div class="summaryLine">
+            <span>1x Item 1</span>
+            <span>R$137,89</span>
+          </div>
+          <div class="summaryLine">
+            <span>2x Item 2</span>
+            <span>R$441,78</span>
+          </div>
+          <div class="summaryLine">
+            <span>Entrega</span>
+            <a href="cadastro.html">Faça o cadastro</a>
+          </div>
+          <div class="summaryTotal">
+            <span>TOTAL</span>
+            <span>R$579,78</span>
+          </div>
+          <a href="checkout.html" class="btnPrimary">CHECKOUT</a>
+        </aside>
+      </div>
+
+     
+      <!-- CÓDIGO CORRIGIDO E SIMPLIFICADO -->
+        <section class="shopSection" id="cartRecommendations">
+          <div class="container">
+            <h2 class="sectionTitle">VOCÊ TAMBÉM PODE GOSTAR:</h2>
+            <!-- Usamos a classe productListGrid que já estiliza uma grade -->
+            <div class="productListGrid">
+              <a href="produto.html" class="productCard">
+                <article>
+                  <figure class="productImageWrapper"><img src="src/Albuns/Age_Of_Fragility.png" alt="Age of Fragility"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                  <div class="productDetails">
+                    <p class="productPrice">R$ 143,90</p>
+                    <div class="productInfoGrid">
+                      <p class="productAlbum">Age of Fragility</p><p class="productYear">(2025)</p>
+                      <p class="productArtist">MARCO MATTEI</p><p class="productLabel">7D MEDIA</p>
+                    </div>
+                  </div>
+                </article>
+              </a>
+
+              <a href="produto.html" class="productCard">
+                <article>
+                  <figure class="productImageWrapper"><img src="src/Albuns/Who.png" alt="Who?"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                  <div class="productDetails">
+                    <p class="productPrice">R$ 136,90</p>
+                    <div class="productInfoGrid">
+                      <p class="productAlbum">Who?</p><p class="productYear">(2025)</p>
+                      <p class="productArtist">ZOLAR CZACK</p><p class="productLabel">Denis Furzov</p>
+                    </div>
+                  </div>
+                </article>
+              </a>
+
+              <a href="produto.html" class="productCard">
+                <article>
+                  <figure class="productImageWrapper"><img src="src/Albuns/Camel.png" alt="Camel"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                  <div class="productDetails">
+                    <p class="productPrice">R$ 71,90</p>
+                    <div class="productInfoGrid">
+                      <p class="productAlbum">Camel</p><p class="productYear">(2025)</p>
+                      <p class="productArtist">BRAS CAMEL</p><p class="productLabel">Eeualizer Records</p>
+                    </div>
+                  </div>
+                </article>
+              </a>
+              
+              <a href="produto.html" class="productCard">
+                <article>
+                  <figure class="productImageWrapper"><img src="src/Albuns/The_Last_will_And_Testament.png" alt="The Last Will and Testament"><button class="favoriteBtn" aria-label="Favoritar">♡</button></figure>
+                  <div class="productDetails">
+                    <p class="productPrice">R$ 200,00</p>
+                    <div class="productInfoGrid">
+                      <p class="productAlbum">The Last Will and Testament</p><p class="productYear">(2024)</p>
+                      <p class="productArtist">OPETH</p><p class="productLabel">Napalm Records</p>
+                    </div>
+                  </div>
+                </article>
+              </a>  
+            </div>
+          </div>
+        </section>
+
+    </div>
+  </main>
+
+  <footer class="mainFooter">
+    <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
+  </footer>
+
+</body>
+</html>
