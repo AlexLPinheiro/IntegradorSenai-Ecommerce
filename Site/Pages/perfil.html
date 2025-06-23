@@ -1,137 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Progressive - Perfil</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-</head>
-<body class="profilePage internal-page">
-
-  <header class="mainHeader">
-  <nav class="navBar">
-      <ul class="navMenu">
-        <li><a href="homeLogado.html">HOME</a></li>
-        <li><a href="shopLogado.html">SHOP</a></li>
-        <li><a href="contatoLogado.html">CONTATO</a></li>
-        <li><a href="sobreNosLogado.html">SOBRE NÓS</a></li>
-        <li>
-          <a href="carrinhoLogado.html">
-            <figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></figure>
-          </a>
-        </li>
-      </ul>
-      <div class="navIcons">
-        <a href="#">
-          <figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></figure>
-        </a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="container">
-      <p class="breadcrumbs">
-        <a href="homeLogado.html">Home</a> → Perfil → Informações pessoais
-      </p>
-
-      <div class="profileWrapper">
-        <!-- Coluna da Esquerda: Navegação do Perfil -->
-        <aside class="profileSidebar">
-          <div class="profile-menu-card">
-            <div class="userCard">
-                <figure class="userAvatar-small"><img src="src/Ícones/Avatar.png" alt="Avatar do usuário"></img></figure>
-                <!-- Novo div para agrupar as informações de texto -->
-                <div class="userInfo">
-                <h2 class="userName">Alex Luna Pinheiro</h2>
-                <p class="userEmail">alex@gmail.com</p>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Progressive - Perfil</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&amp;family=Roboto:wght@400;700;900&amp;display=swap" rel="stylesheet" />
+   </head>
+   <body class="profilePage internal-page">
+      <header class="mainHeader">
+         <nav class="navBar">
+            <ul class="navMenu">
+               <li><a href="homeLogado.html">HOME</a></li>
+               <li><a href="shopLogado.html">SHOP</a></li>
+               <li><a href="contatoLogado.html">CONTATO</a></li>
+               <li><a href="sobreNosLogado.html">SOBRE NÓS</a></li>
+               <li>
+                  <a href="carrinhoLogado.html">
+                     <figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart" /></figure>
+                  </a>
+               </li>
+            </ul>
+            <div class="navIcons">
+               <a href="#">
+                  <figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser" /></figure>
+               </a>
             </div>
-          </div>
-            <nav class="profileNav">
-              <ul>
-                <li><a href="perfil.html" class="active">INFORMAÇÕES DO PERFIL</a></li>
-                <li><a href="pedidos.html">HISTÓRICO DE PEDIDOS</a></li>
-                <li><a href="favoritos.html">ITENS FAVORITADOS</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="contactCard">
-            <img src="src/Ícones/Contato.png" alt="Ícone de contato"></img>
-            <p>Entre em contato conosco em caso de dúvidas ou transtornos.</p>
-            <p>Acesse nossa página de contato:</p>
-            <a href="contatoLogado.html" class="contactButton">CONTATO</a>
-          </div>
-        </aside>
-
-        <!-- Coluna da Direita: Conteúdo Principal -->
-        <section class="profileContent">
-          <h1 class="contentTitle">INFORMAÇÕES PESSOAIS:</h1>
-          
-          <figure class="mainProfilePic">
-            <img src="src/Ícones/Avatar.png" alt="Avatar Principal do usuário"></img>
-            <a href="#" class="editPicButton" aria-label="Editar foto de perfil">
-              <img src="src/Ícones/Editar.png" alt="Ícone de edição"></img>
-            </a>
-          </figure>
-
-          <form class="profileForm">
-            <div class="formGroup full-width">
-              <label for="email">Email:</label>
-              <input type="email" id="email" class="formInput" value="alexmito@gmail.com">
+         </nav>
+      </header>
+      <main>
+         <div class="container">
+            <p class="breadcrumbs">
+               <a href="homeLogado.html">Home</a> → Perfil → Informações pessoais
+            </p>
+            <div class="profileWrapper">
+               <!-- Coluna da Esquerda: Navegação do Perfil -->
+               <aside class="profileSidebar">
+                  <div class="profile-menu-card">
+                     <div class="userCard">
+                        <figure class="userAvatar-small">
+                           <img src="src/Ícones/Avatar.png" alt="Avatar do usuário" />
+                        </figure>
+                        <div class="userInfo">
+                           <h2 class="userName">Alex Luna Pinheiro</h2>
+                           <p class="userEmail">alex@gmail.com</p>
+                        </div>
+                     </div>
+                     <nav class="profileNav">
+                        <ul>
+                           <li><a href="perfil.html" class="active">INFORMAÇÕES DO PERFIL</a></li>
+                           <li><a href="pedidos.html">HISTÓRICO DE PEDIDOS</a></li>
+                           <li><a href="favoritos.html">ITENS FAVORITADOS</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div class="contactCard">
+                     <img src="src/Ícones/Contato.png" alt="Ícone de contato" />
+                     <p>Entre em contato conosco em caso de dúvidas ou transtornos.</p>
+                     <p>Acesse nossa página de contato:</p>
+                     <a href="contatoLogado.html" class="contactButton">CONTATO</a>
+                  </div>
+               </aside>
+               <!-- Coluna da Direita: Conteúdo Principal -->
+               <section class="profileContent">
+                  <h1 class="contentTitle">INFORMAÇÕES PESSOAIS:</h1>
+                  <figure class="mainProfilePic">
+                     <img src="src/Ícones/Avatar.png" alt="Avatar Principal do usuário" />
+                     <a href="#" class="editPicButton" aria-label="Editar foto de perfil">
+                     <img src="src/Ícones/Editar.png" alt="Ícone de edição" />
+                     </a>
+                  </figure>
+                  <form class="profileForm">
+                     <div class="formGroup full-width">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" class="formInput" value="alexmito@gmail.com" />
+                     </div>
+                     <div class="formGroup full-width">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" class="formInput" value="**********" />
+                     </div>
+                     <div class="formGroup full-width">
+                        <label for="telefone">DDD e número de telefone</label>
+                        <input type="tel" id="telefone" class="formInput" value="(19) 9092-8922" />
+                     </div>
+                     <div class="formRow">
+                        <div class="formGroup">
+                           <label for="cep">CEP</label>
+                           <input type="text" id="cep" class="formInput" value="12345-300" />
+                        </div>
+                        <div class="formGroup">
+                           <label for="endereco">ENDEREÇO</label>
+                           <input type="text" id="endereco" class="formInput formInput-gray" value="Rua dos mafagafos" readonly />
+                        </div>
+                     </div>
+                     <div class="formRow">
+                        <div class="formGroup">
+                           <label for="numero">NÚMERO</label>
+                           <input type="text" id="numero" class="formInput" value="518" />
+                        </div>
+                        <div class="formGroup">
+                           <label for="bairro">BAIRRO</label>
+                           <input type="text" id="bairro" class="formInput formInput-gray" value="Jardim novo horizonte" readonly />
+                        </div>
+                     </div>
+                     <div class="formRow">
+                        <div class="formGroup">
+                           <label for="estado">ESTADO</label>
+                           <select id="estado" class="formInput formInput-gray" disabled>
+                              <option>São Paulo</option>
+                           </select>
+                        </div>
+                        <div class="formGroup">
+                           <label for="cidade">CIDADE</label>
+                           <input type="text" id="cidade" class="formInput formInput-gray" value="Campinas" readonly />
+                        </div>
+                     </div>
+                  </form>
+               </section>
             </div>
-            <div class="formGroup full-width">
-              <label for="senha">Senha:</label>
-              <input type="password" id="senha" class="formInput" value="**********">
-            </div>
-            <div class="formGroup full-width">
-              <label for="telefone">DDD e número de telefone</label>
-              <input type="tel" id="telefone" class="formInput" value="(19) 9092-8922">
-            </div>
-            <div class="formRow">
-              <div class="formGroup">
-                <label for="cep">CEP</label>
-                <input type="text" id="cep" class="formInput" value="12345-300">
-              </div>
-              <div class="formGroup">
-                <label for="endereco">ENDEREÇO</label>
-                <input type="text" id="endereco" class="formInput formInput-gray" value="Rua dos mafagafos" readonly>
-              </div>
-            </div>
-            <div class="formRow">
-              <div class="formGroup">
-                <label for="numero">NÚMERO</label>
-                <input type="text" id="numero" class="formInput" value="518">
-              </div>
-              <div class="formGroup">
-                <label for="bairro">BAIRRO</label>
-                <input type="text" id="bairro" class="formInput formInput-gray" value="Jardim novo horizonte" readonly>
-              </div>
-            </div>
-            <div class="formRow">
-              <div class="formGroup">
-                <label for="estado">ESTADO</label>
-                <select id="estado" class="formInput formInput-gray" disabled>
-                  <option>São Paulo</option>
-                </select>
-              </div>
-              <div class="formGroup">
-                <label for="cidade">CIDADE</label>
-                <input type="text" id="cidade" class="formInput formInput-gray" value="Campinas" readonly>
-              </div>
-            </div>
-          </form>
-        </section>
-      </div>
-    </div>
-  </main>
-
-  <footer class="mainFooter">
-    <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
-  </footer>
-
-</body>
+         </div>
+      </main>
+      <footer class="mainFooter">
+         <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
+      </footer>
+   </body>
 </html>

@@ -1,73 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Progressive - Finalizar Compra</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-</head>
-<body class="loginPage internal-page">
-
-  <header class="mainHeader">
-    <nav class="navBar">
-      <ul class="navMenu">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="shop.html">SHOP</a></li>
-        <li><a href="contato.html">CONTATO</a></li>
-        <li><a href="sobre_nos.html">SOBRE NÓS</a></li>
-        <li>
-          <a href="carrinho.html">
-            <figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></figure>
-          </a>
-        </li>
-      </ul>
-      <div class="navIcons">
-        <a href="login.html">
-          <figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></figure>
-        </a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="container">
-      <p class="breadcrumbs">
-        <a href="index.html">Home</a> → <a href="carrinho.html">Carrinho</a> → Finalizar Compra
-      </p>
-      <h1 class="pageTitle">FINALIZAR COMPRA</h1>
-
-      <div class="loginContainer">
-        <!-- Coluna da Esquerda: Login -->
-        <div class="loginColumn">
-          <h2>Já sou cliente</h2>
-          <form action="#">
-            <input type="text" class="formInput" placeholder="Email ou CPF">
-            <input type="password" class="formInput" placeholder="Senha">
-            <a href="#" class="forgotPassword">Esqueci minha senha</a>
-            <a href="checkout.html" class="btnPrimary">ACESSAR CONTA</a>
-          </form>
-        </div>
-
-        <div class="loginDivider"></div>
-
-        <!-- Coluna da Direita: Criar Conta -->
-        <div class="loginColumn">
-          <h2>Criar conta</h2>
-          <form action="cadastroCheckout.html">
-            <input type="email" class="formInput" placeholder="Informe seu e-mail">
-            <button type="submit" class="btnPrimary">PROSSEGUIR</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="mainFooter">
-    <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
-  </footer>
-
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <title>Progressive - Finalizar Compra</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+   </head>
+   <body class="loginPage internal-page">
+      <header class="mainHeader">
+         <nav class="navBar">
+            <ul class="navMenu">
+               <li><a href="homeLogado.html">HOME</a></li>
+               <li><a href="shopLogado.html">SHOP</a></li>
+               <li><a href="contatoLogado.html">CONTATO</a></li>
+               <li><a href="sobreNosLogado.html">SOBRE NÓS</a></li>
+               <li>
+                  <a href="carrinhoLogado.html">
+                     <figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></figure>
+                  </a>
+               </li>
+            </ul>
+            <div class="navIcons">
+               <a href="perfil.html">
+                  <figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></figure>
+               </a>
+            </div>
+         </nav>
+      </header>
+      <main>
+         <div class="container">
+            <p class="breadcrumbs">
+               <a href="homeLogado.html">Home</a> → <a href="carrinhoLogado.html">Carrinho</a> → Finalizar Compra
+            </p>
+            <h1 class="pageTitle">FINALIZAR COMPRA</h1>
+            <div class="loginContainer">
+               <!-- Coluna da Esquerda: Login -->
+               <div class="loginColumn">
+                  <h2>Já sou cliente</h2>
+                  <form action="checkout.html">
+                     <input type="text" class="formInput" placeholder="Email ou CPF">
+                     <input type="password" class="formInput" placeholder="Senha">
+                     <a href="#" class="forgotPassword">Esqueci minha senha</a>
+                     <button type="submit" class="btnPrimary">ACESSAR CONTA</button>
+                  </form>
+               </div>
+               <div class="loginDivider"></div>
+               <!-- Coluna da Direita: Criar Conta -->
+               <div class="loginColumn">
+                  <h2>Criar conta</h2>
+                  <form action="cadastroCheckout.html">
+                     <input type="email" class="formInput" placeholder="Informe seu e-mail">
+                     <button type="submit" class="btnPrimary">PROSSEGUIR</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer class="mainFooter">
+         <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
+      </footer>
+   </body>
 </html>

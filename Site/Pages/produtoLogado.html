@@ -1,115 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Progressive - The Dark Side of The Moon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css"> 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <title>Progressive - The Dark Side of The Moon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
 </head>
-<body class="prodcutPage internal-page">
+<body class="productPage internal-page">
+    <header class="mainHeader">
+        <nav class="navBar">
+            <ul class="navMenu">
+                <li><a href="homeLogado.html">HOME</a></li>
+                <li><a href="shopLogado.html">SHOP</a></li>
+                <li><a href="contatoLogado.html">CONTATO</a></li>
+                <li><a href="sobreNosLogado.html">SOBRE NÓS</a></li>
+                <li>
+                    <a href="carrinhoLogado.html">
+                        <figure>
+                            <img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart" />
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+            <div class="navIcons">
+                <a href="perfil.html">
+                    <figure>
+                        <img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser" />
+                    </figure>
+                </a>
+            </div>
+        </nav>
+    </header>
 
-  <header class="mainHeader">
-    <nav class="navBar">
-      <ul class="navMenu">
-        <li><a href="homeLogado.html">HOME</a></li>
-        <li><a href="shopLogado.html">SHOP</a></li>
-        <li><a href="contatoLogado.html">CONTATO</a></li>
-        <li><a href="sobreNosLogado.html">SOBRE NÓS</a></li>
-        <li>
-          <a href="carrinhoLogado.html">
-            <figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></figure>
-          </a>
-        </li>
-      </ul>
-      <div class="navIcons">
-        <a href="perfil.html">
-          <figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></figure>
-        </a>
-      </div>
-    </nav>
-  </header>
+    <main>
+        <div class="container">
+            <div class="productHeader">
+                <p class="breadcrumbs">
+                    <a href="homeLogado.html">Home</a> → <a href="shopLogado.html">Shop</a> → Produto → The Dark Side of The Moon
+                </p>
+                <h1 class="productTitleMain">The Dark Side of The Moon</h1>
+            </div>
 
-  <main>
-    <div class="container">
-      <div class="productHeader">
-        <p class="breadcrumbs">
-          <a href="homeLogado.html">Home</a> → <a href="shopLogado.html">Shop</a> → Produto → The Dark Side of The Moon
-        </p>
-        <h1 class="productTitleMain">The Dark Side of The Moon</h1>
-      </div>
+            <section class="productMainSection">
+                <div class="productGallery">
+                    <span class="productYearBadge">Álbum lançado em 1973</span>
+                    <figure class="imageSwapContainer">
+                        <img src="src/Albuns/The_Dark_Side_Of_The_Moon_Frente.jpg" alt="Capa do The Dark Side of The Moon" class="imgFront" />
+                        <img src="src/Albuns/The_Dark_Side_Of_The_Moon_Verso.jpg" alt="Verso do The Dark Side of The Moon" class="imgBack" />
+                    </figure>
+                </div>
 
-      <section class="productMainSection">
-        <div class="productGallery">
-          <span class="productYearBadge">Albúm lançado em 1972</span>
-          <figure class="imageSwapContainer">
-            <img src="src/Albuns/The_Dark_Side_Of_The_Moon_Frente.jpg" alt="Capa do The Dark Side of The Moon" class="imgFront">
-            <img src="src/Albuns/The_Dark_Side_Of_The_Moon_Verso.jpg" alt="Verso do The Dark Side of The Moon" class="imgBack">
-          </figure>
+                <aside class="productPurchaseBox">
+                    <div class="priceSection">
+                        <span class="priceMain">R$<strong>137</strong>,<sup>89</sup></span>
+                        <span class="priceUnit">(R$137,89 / unidade)</span>
+                    </div>
+                    <div class="deliveryNotice">
+                        <img src="src/Ícones/localização.png" alt="Ícone de localização" />
+                        <span>Você não possui nenhum endereço vinculado à sua conta no momento.</span>
+                    </div>
+                    <div class="quantitySelector">
+                        <label for="quantity">QUANTIDADE:</label>
+                        <select id="quantity" name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <a href="carrinhoLogado.html">
+                        <button class="btnProduct btnAddtoCart">ADICIONAR AO CARRINHO</button>
+                    </a>
+                    <button class="btnProduct btnBuyNow">COMPRAR AGORA</button>
+                    <div class="deliveryEstimate">
+                        <p>ESTIMATIVA DE ENTREGA: INDEFINIDA</p>
+                        <p>R$12,00</p>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="productDescriptionDetails">
+                <h2>Descrição do produto:</h2>
+                <p><strong>Vinil Pink Floyd - The Dark Side of The Moon (1973)</strong></p>
+                <p>The Dark Side of the Moon é o oitavo álbum de estúdio da banda britânica de rock progressivo Pink Floyd, lançado em 1 de março de 1973 através da Harvest Records no Reino Unido e Capitol Records nos Estados Unidos.</p>
+
+                <h3>Tracklist:</h3>
+                <ol>
+                    <li>Speak To Me - 03:58</li>
+                    <li>On The Run - 03:35</li>
+                    <li>Time - 07:05</li>
+                    <li>The Great Gig In The Sky - 03:35</li>
+                    <li>Money - 04:44</li>
+                    <li>Us and Them - 06:23</li>
+                    <li>Any Colour You Like - 07:50</li>
+                    <li>Brain Damage - 03:48</li>
+                    <li>Eclipse - 02:01</li>
+                </ol>
+
+                <h2>Especificações do produto:</h2>
+                <div class="specItem">
+                    <p><strong>Gênero:</strong></p>
+                    <p>Rock Progressivo Clássico</p>
+                </div>
+            </section>
         </div>
+    </main>
 
-        <aside class="productPurchaseBox">
-          <div class="priceSection">
-            <span class="priceMain">R$<strong>137</strong>,<sup>89</sup></span>
-            <span class="priceUnit">(R$137,89 / unidade)</span>
-          </div>
-          <div class="deliveryNotice">
-            <img src="src/Ícones/localização.png" alt="Ícone de localização">
-            <span>Você não possui nenhum endereço vinculado a sua conta no momento.</span>
-          </div>
-          <div class="quantitySelector">
-            <label for="quantity">QUANTIDADE:</label>
-            <select id="quantity" name="quantity">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <a href="carrinhoLogado.html">
-            <button class="btnProduct btnAddtoCart">ADICIONAR AO CARRINHO</button>
-          </a>
-          <button class="btnProduct btnBuyNow">COMPRAR AGORA</button>
-          <div class="deliveryEstimate">
-            <p>ESTIMATIVA DE ENTREGA: INDEFINIDA</p>
-            <p>R$12,00</p>
-          </div>
-        </aside>
-      </section>
-
-      <section class="productDescriptionDetails">
-        <h2>Descrição do produto:</h2>
-        <p><strong>Vinil Pink Floyd - The Dark side of The Moon (1972)</strong></p>
-        <p>The Dark Side of the Moon é o oitavo álbum de estúdio da banda britânica de rock progressivo Pink Floyd, lançado em 1 de março de 1973 através da Harvest Records no Reino Unido e Capitol Records nos Estados Unidos.</p>
-
-        <h3>TrackList:</h3>
-        <ol>
-          <li>Speak To Me - 03:58</li>
-          <li>On The Run - 03:35</li>
-          <li>Time - 07:05</li>
-          <li>The Great Gig In The Sky - 03:35</li>
-          <li>Money - 04:44</li>
-          <li>Us an Then - 06:23</li>
-          <li>Any Color You Like - 07:50</li>
-          <li>Brain Damage - 03:48</li>
-          <li>Eclipse - 02:01</li>
-        </ol>
-
-        <h2>Especificações do produto:</h2>
-        <div class="specItem">
-          <p><strong>Gênero:</strong></p>
-          <p>Rock Progressivo Clássico</p>
-        </div>
-      </section>
-    </div>
-  </main>
-  
-  <footer class="mainFooter">
-    <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
-  </footer>
-
+     <footer class="footer">
+        <nav class="footerNav">
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+            <a href="#">Redes Sociais</a>
+        </nav>
+        <p>Todos os direitos reservados, Progressive.com</p>
+    </footer>
 </body>
 </html>

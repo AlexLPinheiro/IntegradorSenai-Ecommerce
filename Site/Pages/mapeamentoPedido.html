@@ -1,117 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Progressive - Mapeamento do Pedido</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-</head>
-<body class="trackingPage internal-page">
-
-  <header class="mainHeader">
-    <nav class="navBar">
-      <ul class="navMenu">
-        <li><a href="homeLogado.html">HOME</a></li>
-        <li><a href="shopLogado.html">SHOP</a></li>
-        <li><a href="contatoLogado.html">CONTATO</a></li>
-        <li><a href="sobreNosLogado.html">SOBRE NÓS</a></li>
-        <li>
-          <a href="carrinhoLogado.html">
-            <figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart"></figure>
-          </a>
-        </li>
-      </ul>
-      <div class="navIcons">
-        <a href="perfil.html">
-          <figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser"></figure>
-        </a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="container">
-      <h1 class="pageTitle">MAPEAMENTO DO PEDIDO:</h1>
-
-      <div class="trackingWrapper">
-        <!-- Coluna da Esquerda: Detalhes do Pedido -->
-        <section class="trackingDetails">
-          <div class="detailBlock idBlock">
-            <label>ID DO PEDIDO:</label>
-            <p>1231245151525123412341512</p>
-          </div>
-
-          <div class="detailBlock">
-            <label>Data do pedido:</label>
-            <p><strong>27/11/2012</strong></p>
-          </div>
-
-          <div class="trackingItem">
-            <figure class="trackingItem-image"><img src="src/Albuns/The_Dark_Side_Of_The_Moon_Frente.jpg" alt="Capa do álbum"></img></figure>
-            <div class="trackingItem-details">
-              <h3>THE DARK SIDE OF THE MOON</h3>
-              <p>Pink Floyd</p>
-            </div>
-            <span class="trackingItem-price">R$137,89</span>
-          </div>
-
-          <div class="trackingTotals">
-            <div class="summaryLine"><span>Subtotal</span><span>R$579,98</span></div>
-            <div class="summaryLine"><span>Frete</span><span>Grátis</span></div>
-            <div class="summaryLine"><span>Taxas</span><span>R$120,00</span></div>
-            <div class="summaryTotal"><span>Total</span><span>R$699,98</span></div>
-          </div>
-        </section>
-
-        <!-- Coluna da Direita: Mapa e Linha do Tempo -->
-        <aside class="trackingMapArea">
-          <div class="map-placeholder">
-            <!-- A imagem do mapa será aplicada via CSS -->
-          </div>
-          <div class="trackingTimeline-wrapper">
-            <h2 class="timelineTitle">MAPEAMENTO DO PEDIDO:</h2>
-            <ul class="trackingTimeline">
-              <li class="timeline-item active">
-                <div class="timeline-info">
-                  <h3>saída da entrega</h3>
-                  <p>Xhangai - China</p>
-                </div>
-                <span class="timeline-date">30/11/2012</span>
-              </li>
-              <li class="timeline-item">
-                <div class="timeline-info">
-                  <h3>Chegada no terminal portuário</h3>
-                  <p>Santos - SP</p>
-                </div>
-                <span class="timeline-date">05/12/2012</span>
-              </li>
-              <li class="timeline-item">
-                <div class="timeline-info">
-                  <h3>Centro de distribuição</h3>
-                  <p>Curitiba - PR</p>
-                </div>
-                <span class="timeline-date">06/12/2012</span>
-              </li>
-              <li class="timeline-item">
-                <div class="timeline-info">
-                  <h3>Destino final</h3>
-                  <p>Sua residência</p>
-                </div>
-                <span class="timeline-date">15/05/2025</span>
-              </li>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Progressive - Mapeamento do Pedido</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+   </head>
+   <body class="trackingPage internal-page">
+      <header class="mainHeader">
+         <nav class="navBar">
+            <ul class="navMenu">
+               <li><a href="homeLogado.html">HOME</a></li>
+               <li><a href="shopLogado.html">SHOP</a></li>
+               <li><a href="contatoLogado.html">CONTATO</a></li>
+               <li><a href="sobreNosLogado.html">SOBRE NÓS</a></li>
+               <li>
+                  <a href="carrinhoLogado.html">
+                     <figure><img src="src/Ícones/Carrinho_De_Compras_Preto.png" alt="Carrinho" class="iconImg iconCart" /></figure>
+                  </a>
+               </li>
             </ul>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </main>
-
-  <footer class="mainFooter">
-    <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
-  </footer>
-
-</body>
+            <div class="navIcons">
+               <a href="perfil.html">
+                  <figure><img src="src/Ícones/User_Preto.png" alt="Perfil" class="iconImg iconUser" /></figure>
+               </a>
+            </div>
+         </nav>
+      </header>
+      <main>
+         <div class="container">
+            <h1 class="pageTitle">MAPEAMENTO DO PEDIDO:</h1>
+            <div class="trackingWrapper">
+               <!-- Coluna da Esquerda: Detalhes do Pedido -->
+               <section class="trackingDetails">
+                  <div class="detailBlock idBlock">
+                     <label>ID DO PEDIDO:</label>
+                     <p>1231245151525123412341512</p>
+                  </div>
+                  <div class="detailBlock">
+                     <label>Data do pedido:</label>
+                     <p><strong>27/11/2012</strong></p>
+                  </div>
+                  <div class="trackingItem">
+                     <figure class="trackingItem-image"><img src="src/Albuns/The_Dark_Side_Of_The_Moon_Frente.jpg" alt="Capa do álbum" /></figure>
+                     <div class="trackingItem-details">
+                        <h3>THE DARK SIDE OF THE MOON</h3>
+                        <p>Pink Floyd</p>
+                     </div>
+                     <span class="trackingItem-price">R$137,89</span>
+                  </div>
+                  <div class="trackingTotals">
+                     <div class="summaryLine"><span>Subtotal</span><span>R$579,98</span></div>
+                     <div class="summaryLine"><span>Frete</span><span>Grátis</span></div>
+                     <div class="summaryLine"><span>Taxas</span><span>R$120,00</span></div>
+                     <div class="summaryTotal"><span>Total</span><span>R$699,98</span></div>
+                  </div>
+               </section>
+               <!-- Coluna da Direita: Mapa e Linha do Tempo -->
+               <aside class="trackingMapArea">
+                  <div class="map-placeholder">
+                     <!-- A imagem do mapa será aplicada via CSS -->
+                  </div>
+                  <div class="trackingTimeline-wrapper">
+                     <h2 class="timelineTitle">MAPEAMENTO DO PEDIDO:</h2>
+                     <ul class="trackingTimeline">
+                        <li class="timeline-item active">
+                           <div class="timeline-info">
+                              <h3>saída da entrega</h3>
+                              <p>Xhangai - China</p>
+                           </div>
+                           <span class="timeline-date">30/11/2012</span>
+                        </li>
+                        <li class="timeline-item">
+                           <div class="timeline-info">
+                              <h3>Chegada no terminal portuário</h3>
+                              <p>Santos - SP</p>
+                           </div>
+                           <span class="timeline-date">05/12/2012</span>
+                        </li>
+                        <li class="timeline-item">
+                           <div class="timeline-info">
+                              <h3>Centro de distribuição</h3>
+                              <p>Curitiba - PR</p>
+                           </div>
+                           <span class="timeline-date">06/12/2012</span>
+                        </li>
+                        <li class="timeline-item">
+                           <div class="timeline-info">
+                              <h3>Destino final</h3>
+                              <p>Sua residência</p>
+                           </div>
+                           <span class="timeline-date">15/05/2025</span>
+                        </li>
+                     </ul>
+                  </div>
+               </aside>
+            </div>
+         </div>
+      </main>
+      <footer class="mainFooter">
+         <p>Todos os direitos reservados. PROGRESSIVE.CO</p>
+      </footer>
+   </body>
 </html>
